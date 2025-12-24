@@ -250,6 +250,102 @@ app.post("/search", async (req, res) => {
         mode
     });
 });
+// Chat endpoint - proxies to OpenAI with RAG context
+app.post("/chat", async (req, res) => {
+    const { question, top_k = 5 } = req.body;
+    if (!question) {
+        return res.status(400).json({ error: "question is required" });
+    }
+    const apiKey = process.env.OPENAI_API_KEY;
+    if (!apiKey) {
+        return res.status(500).json({ error: "OpenAI API key not configured" });
+    }
+    // Search for relevant context
+    const searchResults = searchKeyword(question, top_k);
+    const context = searchResults.map((r, i) => `[Source ${i + 1}]: ${r.chunk.text}`).join("\n\n");
+    const systemPrompt = `You are an MSHA (Mine Safety and Health Administration) compliance expert assistant. 
+Answer questions about mine safety regulations, training requirements, and compliance procedures.
+
+Use the following retrieved document excerpts to inform your answer. Cite sources using [Source N] notation.
+If the documents don't contain relevant information, say so and provide general guidance.
+
+Keep responses clear, practical, and actionable for mine operators.
+
+RETRIEVED DOCUMENTS:
+${context || "No specific documents found. Please answer based on general MSHA knowledge."}`;
+    const input = `${systemPrompt}\n\nUser Question: ${question}`;
+    // Set up SSE headers
+    res.setHeader('Content-Type', 'text/event-stream');
+    res.setHeader('Cache-Control', 'no-cache');
+    res.setHeader('Connection', 'keep-alive');
+    // Send sources first so client can use them for citations
+    res.write(`data: ${JSON.stringify({
+        type: "sources",
+        sources: searchResults.map(r => enrichWithSource(r.chunk, r.score))
+    })}\n\n`);
+    try {
+        const response = await fetch("https://api.openai.com/v1/responses", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${apiKey}`
+            },
+            body: JSON.stringify({
+                model: "gpt-4o-mini",
+                input,
+                stream: true
+            })
+        });
+        if (!response.ok) {
+            const error = await response.json();
+            res.write(`data: ${JSON.stringify({ type: "error", error: error.error?.message || "API request failed" })}\n\n`);
+            res.end();
+            return;
+        }
+        // Stream the response
+        const reader = response.body?.getReader();
+        if (!reader) {
+            res.write(`data: ${JSON.stringify({ type: "error", error: "No response body" })}\n\n`);
+            res.end();
+            return;
+        }
+        const decoder = new TextDecoder();
+        let buffer = "";
+        while (true) {
+            const { done, value } = await reader.read();
+            if (done)
+                break;
+            buffer += decoder.decode(value, { stream: true });
+            const lines = buffer.split("\n");
+            buffer = lines.pop() || "";
+            for (const line of lines) {
+                if (line.startsWith("data: ") && line !== "data: [DONE]") {
+                    try {
+                        const data = JSON.parse(line.slice(6));
+                        // Forward relevant events
+                        if (data.type === "response.output_text.delta" ||
+                            data.type === "response.content_part.delta") {
+                            const text = data.delta?.text || data.delta || "";
+                            if (text) {
+                                res.write(`data: ${JSON.stringify({ type: "delta", text })}\n\n`);
+                            }
+                        }
+                    }
+                    catch (e) {
+                        // Skip unparseable lines
+                    }
+                }
+            }
+        }
+        res.write(`data: ${JSON.stringify({ type: "done" })}\n\n`);
+        res.end();
+    }
+    catch (error) {
+        console.error("Chat error:", error);
+        res.write(`data: ${JSON.stringify({ type: "error", error: "Failed to generate response" })}\n\n`);
+        res.end();
+    }
+});
 const PORT = parseInt(process.env.PORT || "8090");
 app.listen(PORT, () => console.error(`HTTP server on port ${PORT}`));
 // Start
