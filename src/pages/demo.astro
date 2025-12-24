@@ -343,14 +343,10 @@ import Layout from '../layouts/Layout.astro';
 </style>
 
 <script>
-  // Local development: Create a file at /public/local.config.js with:
-  // window.LOCAL_CONFIG = { OPENAI_API_KEY: 'sk-your-key', MSHA_RAG_URL: 'http://localhost:8090/search' };
-  
-  // Configuration - injected by GitHub Actions at build time, or from local config
+  // Configuration from build-time environment variables or local override
   const CONFIG = {
-    searchEndpoint: window.LOCAL_CONFIG?.MSHA_RAG_URL 
-      || ('{{MSHA_RAG_URL}}'.includes('{{') ? 'https://vario-automation-production.up.railway.app/search' : '{{MSHA_RAG_URL}}'),
-    openaiApiKey: window.LOCAL_CONFIG?.OPENAI_API_KEY || '{{OPENAI_API_KEY}}'
+    searchEndpoint: window.LOCAL_CONFIG?.MSHA_RAG_URL || 'https://vario-automation-production.up.railway.app/search',
+    openaiApiKey: window.LOCAL_CONFIG?.OPENAI_API_KEY || import.meta.env.PUBLIC_OPENAI_API_KEY || ''
   };
 
   class MSHADemo {

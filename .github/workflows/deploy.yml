@@ -31,21 +31,9 @@ jobs:
         run: npm ci
       
       - name: Build
-        run: npm run build
-      
-      - name: Inject secrets
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          MSHA_RAG_URL: ${{ secrets.MSHA_RAG_URL }}
-        run: |
-          # Validate secrets are set
-          if [[ -z "$OPENAI_API_KEY" || -z "$MSHA_RAG_URL" ]]; then
-            echo "ERROR: Required secrets not set" >&2
-            exit 1
-          fi
-          # Replace placeholders in built files (using perl for safer handling of special chars)
-          find ./dist \( -name "*.html" -o -name "*.js" \) -type f -exec perl -i -pe "s/\\{\\{OPENAI_API_KEY\\}\\}/\$ENV{OPENAI_API_KEY}/g" {} \;
-          find ./dist \( -name "*.html" -o -name "*.js" \) -type f -exec perl -i -pe "s/\\{\\{MSHA_RAG_URL\\}\\}/\$ENV{MSHA_RAG_URL}/g" {} \;
+          PUBLIC_OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: npm run build
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
