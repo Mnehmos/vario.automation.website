@@ -349,7 +349,7 @@ import Layout from '../layouts/Layout.astro';
   // Configuration - injected by GitHub Actions at build time, or from local config
   const CONFIG = {
     searchEndpoint: window.LOCAL_CONFIG?.MSHA_RAG_URL 
-      || ('{{MSHA_RAG_URL}}'.includes('{{') ? 'http://localhost:8090/search' : '{{MSHA_RAG_URL}}'),
+      || ('{{MSHA_RAG_URL}}'.includes('{{') ? 'https://vario-automation-production.up.railway.app/search' : '{{MSHA_RAG_URL}}'),
     openaiApiKey: window.LOCAL_CONFIG?.OPENAI_API_KEY || '{{OPENAI_API_KEY}}'
   };
 
