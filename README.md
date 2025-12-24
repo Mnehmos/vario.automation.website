@@ -104,3 +104,4 @@ The form uses Formspree by default. To set up:
 5. Replace `https://formspree.io/f/your-form-id` in `contact.astro`
 
 Alternative options: Netlify Forms, Google Forms, or a custom backend.
+"# Trigger rebuild with secrets"  
