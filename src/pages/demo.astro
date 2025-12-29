@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title="MSHA Compliance Agent Demo" description="Live demonstration of AI-powered MSHA mine safety compliance assistant. Ask questions about training requirements, safety regulations, and compliance procedures.">
@@ -130,7 +131,7 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <!-- Local config loader - only works in dev, file doesn't exist in production -->
-<script is:inline src="/vario-automation/local.config.js"></script>
+<script is:inline src={`${base}local.config.js`}></script>
 
 <style is:global>
   .bg-copper-light {

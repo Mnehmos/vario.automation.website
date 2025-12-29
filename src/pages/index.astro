@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title="Automation & AI Agents for Business">
@@ -15,7 +16,7 @@ import Layout from '../layouts/Layout.astro';
             Custom workflows and AI agents that handle intake, triage, follow-ups, and reporting—without breaking your existing tools.
           </p>
           <div class="mt-8 flex flex-col sm:flex-row gap-4">
-            <a href="/vario-automation/contact" class="inline-flex items-center justify-center gap-2 bg-stone-900 text-stone-50 px-6 py-3 rounded-lg font-semibold hover:bg-stone-800 transition-colors">
+            <a href={`${base}contact`} class="inline-flex items-center justify-center gap-2 bg-stone-900 text-stone-50 px-6 py-3 rounded-lg font-semibold hover:bg-stone-800 transition-colors">
               Book a 20-min Consult
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -151,7 +152,7 @@ import Layout from '../layouts/Layout.astro';
         Systems that connect your apps, reduce manual work, and keep operations consistent.
       </p>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <a href="/vario-automation/services#automation" class="group bg-white rounded-xl border border-stone-200 p-6 hover:border-copper hover:shadow-md transition-all">
+        <a href={`${base}services#automation`} class="group bg-white rounded-xl border border-stone-200 p-6 hover:border-copper hover:shadow-md transition-all">
           <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-amber-200 transition-colors">
             <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
@@ -161,7 +162,7 @@ import Layout from '../layouts/Layout.astro';
           <p class="text-stone-600 text-sm">Zapier, Make, n8n, or custom scripts that connect your tools and eliminate copy-paste work.</p>
         </a>
         
-        <a href="/vario-automation/services#agents" class="group bg-white rounded-xl border border-stone-200 p-6 hover:border-copper hover:shadow-md transition-all">
+        <a href={`${base}services#agents`} class="group bg-white rounded-xl border border-stone-200 p-6 hover:border-copper hover:shadow-md transition-all">
           <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-blue-200 transition-colors">
             <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
@@ -171,7 +172,7 @@ import Layout from '../layouts/Layout.astro';
           <p class="text-stone-600 text-sm">Email triage, ticket routing, document processing, and knowledge assistants built on Claude/GPT.</p>
         </a>
         
-        <a href="/vario-automation/services#integrations" class="group bg-white rounded-xl border border-stone-200 p-6 hover:border-copper hover:shadow-md transition-all">
+        <a href={`${base}services#integrations`} class="group bg-white rounded-xl border border-stone-200 p-6 hover:border-copper hover:shadow-md transition-all">
           <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-green-200 transition-colors">
             <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
@@ -181,7 +182,7 @@ import Layout from '../layouts/Layout.astro';
           <p class="text-stone-600 text-sm">Connect APIs, webhooks, CRMs, spreadsheets, and databases into unified workflows.</p>
         </a>
         
-        <a href="/vario-automation/services#tools" class="group bg-white rounded-xl border border-stone-200 p-6 hover:border-copper hover:shadow-md transition-all">
+        <a href={`${base}services#tools`} class="group bg-white rounded-xl border border-stone-200 p-6 hover:border-copper hover:shadow-md transition-all">
           <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-purple-200 transition-colors">
             <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
@@ -191,7 +192,7 @@ import Layout from '../layouts/Layout.astro';
           <p class="text-stone-600 text-sm">Lightweight dashboards and admin panels that give your team visibility without overhead.</p>
         </a>
         
-        <a href="/vario-automation/services#reliability" class="group bg-white rounded-xl border border-stone-200 p-6 hover:border-copper hover:shadow-md transition-all">
+        <a href={`${base}services#reliability`} class="group bg-white rounded-xl border border-stone-200 p-6 hover:border-copper hover:shadow-md transition-all">
           <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-red-200 transition-colors">
             <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
@@ -201,7 +202,7 @@ import Layout from '../layouts/Layout.astro';
           <p class="text-stone-600 text-sm">Logging, retries, error handling, monitoring, and versioning so your automation doesn't break silently.</p>
         </a>
         
-        <a href="/vario-automation/services" class="group bg-stone-900 rounded-xl p-6 hover:bg-stone-800 transition-all flex items-center justify-center">
+        <a href={`${base}services`} class="group bg-stone-900 rounded-xl p-6 hover:bg-stone-800 transition-all flex items-center justify-center">
           <div class="text-center">
             <span class="text-stone-50 font-semibold">View all services</span>
             <svg class="w-5 h-5 text-stone-50 mx-auto mt-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -380,7 +381,7 @@ import Layout from '../layouts/Layout.astro';
               1 week turnaround
             </li>
           </ul>
-          <a href="/vario-automation/contact" class="block text-center bg-stone-900 text-stone-50 px-6 py-3 rounded-lg font-semibold hover:bg-stone-800 transition-colors">
+          <a href={`${base}contact`} class="block text-center bg-stone-900 text-stone-50 px-6 py-3 rounded-lg font-semibold hover:bg-stone-800 transition-colors">
             Start here
           </a>
         </div>
@@ -423,7 +424,7 @@ import Layout from '../layouts/Layout.astro';
               2-3 week delivery
             </li>
           </ul>
-          <a href="/vario-automation/contact" class="block text-center bg-copper text-stone-50 px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity">
+          <a href={`${base}contact`} class="block text-center bg-copper text-stone-50 px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity">
             Get a quote
           </a>
         </div>
@@ -457,7 +458,7 @@ import Layout from '../layouts/Layout.astro';
               Production monitoring
             </li>
           </ul>
-          <a href="/vario-automation/contact" class="block text-center bg-stone-900 text-stone-50 px-6 py-3 rounded-lg font-semibold hover:bg-stone-800 transition-colors">
+          <a href={`${base}contact`} class="block text-center bg-stone-900 text-stone-50 px-6 py-3 rounded-lg font-semibold hover:bg-stone-800 transition-colors">
             Let's talk
           </a>
         </div>
@@ -547,7 +548,7 @@ import Layout from '../layouts/Layout.astro';
       <p class="text-xl text-stone-400 mb-8">
         I'll show you what to automate first.
       </p>
-      <a href="/vario-automation/contact" class="inline-flex items-center justify-center gap-2 bg-copper text-stone-50 px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity">
+      <a href={`${base}contact`} class="inline-flex items-center justify-center gap-2 bg-copper text-stone-50 px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity">
         Book a free 20-minute call
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
