@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -9,211 +9,510 @@ const base = import.meta.env.BASE_URL;
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <h1 class="font-display text-4xl lg:text-5xl xl:text-6xl font-bold text-stone-900 leading-tight">
+          <h1
+            class="font-display text-4xl lg:text-5xl xl:text-6xl font-bold text-stone-900 dark:text-stone-50 leading-tight"
+          >
             I automate the boring parts of your business.
           </h1>
-          <p class="mt-6 text-xl text-stone-600 leading-relaxed">
-            Custom workflows and AI agents that handle intake, triage, follow-ups, and reporting—without breaking your existing tools.
+          <p
+            class="mt-6 text-xl text-stone-600 dark:text-stone-300 leading-relaxed"
+          >
+            Custom workflows and AI agents that handle intake, triage,
+            follow-ups, and reporting—without breaking your existing tools.
           </p>
           <div class="mt-8 flex flex-col sm:flex-row gap-4">
-            <a href={`${base}contact`} class="inline-flex items-center justify-center gap-2 bg-stone-900 text-stone-50 px-6 py-3 rounded-lg font-semibold hover:bg-stone-800 transition-colors">
+            <a
+              href={`${base}contact`}
+              class="inline-flex items-center justify-center gap-2 bg-stone-900 dark:bg-stone-100 text-stone-50 dark:text-stone-900 px-6 py-3 rounded-lg font-semibold hover:bg-stone-800 dark:hover:bg-stone-200 transition-colors"
+            >
               Book a 20-min Consult
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
               </svg>
             </a>
-            <a href="#examples" class="inline-flex items-center justify-center gap-2 border-2 border-stone-300 text-stone-700 px-6 py-3 rounded-lg font-semibold hover:border-stone-400 transition-colors">
+            <a
+              href="#examples"
+              class="inline-flex items-center justify-center gap-2 border-2 border-stone-300 dark:border-stone-600 text-stone-700 dark:text-stone-300 px-6 py-3 rounded-lg font-semibold hover:border-stone-400 dark:hover:border-stone-500 transition-colors"
+            >
               See Examples
             </a>
           </div>
-          <div class="mt-12 flex flex-wrap gap-6 text-sm text-stone-500">
+          <div
+            class="mt-12 flex flex-wrap gap-6 text-sm text-stone-500 dark:text-stone-400"
+          >
             <span class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-copper" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              <svg
+                class="w-4 h-4 text-copper"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"></path>
               </svg>
               Based in Safford, AZ
             </span>
             <span class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-copper" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              <svg
+                class="w-4 h-4 text-copper"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"></path>
               </svg>
               Fast turnaround
             </span>
             <span class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-copper" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              <svg
+                class="w-4 h-4 text-copper"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"></path>
               </svg>
               Clear documentation
             </span>
           </div>
         </div>
-        
+
         <!-- Workflow Diagram -->
-        <div class="bg-white rounded-2xl border border-stone-200 p-8 shadow-sm">
-          <div class="text-xs uppercase tracking-wide text-stone-400 mb-6">Example: Lead Response Automation</div>
+        <div
+          class="bg-white dark:bg-stone-900 rounded-2xl border border-stone-200 dark:border-stone-700 p-8 shadow-sm"
+        >
+          <div
+            class="text-xs uppercase tracking-wide text-stone-400 dark:text-stone-500 mb-6"
+          >
+            Example: Lead Response Automation
+          </div>
           <div class="space-y-4">
             <div class="flex items-center gap-4">
-              <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center shrink-0">
-                <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              <div
+                class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center shrink-0"
+              >
+                <svg
+                  class="w-5 h-5 text-amber-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  ></path>
                 </svg>
               </div>
-              <div class="flex-1 bg-stone-50 rounded-lg px-4 py-3">
-                <span class="font-medium text-stone-900">New lead comes in</span>
+              <div
+                class="flex-1 bg-stone-50 dark:bg-stone-800 rounded-lg px-4 py-3"
+              >
+                <span class="font-medium text-stone-900 dark:text-stone-100"
+                  >New lead comes in</span
+                >
+              </div>
+            </div>
+            <div
+              class="ml-5 border-l-2 border-stone-200 dark:border-stone-700 h-4"
+            >
+            </div>
+            <div class="flex items-center gap-4">
+              <div
+                class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center shrink-0"
+              >
+                <svg
+                  class="w-5 h-5 text-blue-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                  ></path>
+                </svg>
+              </div>
+              <div
+                class="flex-1 bg-stone-50 dark:bg-stone-800 rounded-lg px-4 py-3"
+              >
+                <span class="font-medium text-stone-900 dark:text-stone-100"
+                  >AI classifies intent & priority</span
+                >
               </div>
             </div>
             <div class="ml-5 border-l-2 border-stone-200 h-4"></div>
             <div class="flex items-center gap-4">
-              <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center shrink-0">
-                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+              <div
+                class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center shrink-0"
+              >
+                <svg
+                  class="w-5 h-5 text-green-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                  ></path>
                 </svg>
               </div>
-              <div class="flex-1 bg-stone-50 rounded-lg px-4 py-3">
-                <span class="font-medium text-stone-900">AI classifies intent & priority</span>
+              <div
+                class="flex-1 bg-stone-50 dark:bg-stone-800 rounded-lg px-4 py-3"
+              >
+                <span class="font-medium text-stone-900 dark:text-stone-100"
+                  >Sends personalized response</span
+                >
               </div>
             </div>
             <div class="ml-5 border-l-2 border-stone-200 h-4"></div>
             <div class="flex items-center gap-4">
-              <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center shrink-0">
-                <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+              <div
+                class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center shrink-0"
+              >
+                <svg
+                  class="w-5 h-5 text-purple-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"
+                  ></path>
                 </svg>
               </div>
-              <div class="flex-1 bg-stone-50 rounded-lg px-4 py-3">
-                <span class="font-medium text-stone-900">Sends personalized response</span>
-              </div>
-            </div>
-            <div class="ml-5 border-l-2 border-stone-200 h-4"></div>
-            <div class="flex items-center gap-4">
-              <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center shrink-0">
-                <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
-                </svg>
-              </div>
-              <div class="flex-1 bg-stone-50 rounded-lg px-4 py-3">
-                <span class="font-medium text-stone-900">Creates CRM record + notifies team</span>
+              <div
+                class="flex-1 bg-stone-50 dark:bg-stone-800 rounded-lg px-4 py-3"
+              >
+                <span class="font-medium text-stone-900 dark:text-stone-100"
+                  >Creates CRM record + notifies team</span
+                >
               </div>
             </div>
           </div>
-          <div class="mt-6 pt-6 border-t border-stone-100 text-sm text-stone-500">
-            Response time: <span class="font-semibold text-copper">seconds</span>, not hours
+          <div
+            class="mt-6 pt-6 border-t border-stone-100 dark:border-stone-700 text-sm text-stone-500 dark:text-stone-400"
+          >
+            Response time: <span class="font-semibold text-copper">seconds</span
+            >, not hours
           </div>
         </div>
       </div>
     </div>
   </section>
-  
+
   <!-- Pain to Outcome -->
-  <section class="py-20 bg-white">
+  <section class="py-20 bg-white dark:bg-stone-900">
     <div class="max-w-6xl mx-auto px-6">
-      <h2 class="font-display text-3xl font-bold text-stone-900 text-center mb-16">
+      <h2
+        class="font-display text-3xl font-bold text-stone-900 dark:text-stone-50 text-center mb-16"
+      >
         Problems I solve
       </h2>
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-stone-50 rounded-xl p-8">
-          <div class="text-red-500 font-medium text-sm uppercase tracking-wide mb-3">Problem</div>
-          <h3 class="font-display text-xl font-semibold text-stone-900 mb-2">Leads rot in the inbox</h3>
-          <div class="text-green-600 font-medium text-sm uppercase tracking-wide mt-6 mb-3">Solution</div>
-          <p class="text-stone-600">Automated intake + routing gets leads to the right person immediately.</p>
-          <div class="mt-6 pt-6 border-t border-stone-200 text-stone-900 font-semibold">
+        <div class="bg-stone-50 dark:bg-stone-800 rounded-xl p-8">
+          <div
+            class="text-red-500 dark:text-red-400 font-medium text-sm uppercase tracking-wide mb-3"
+          >
+            Problem
+          </div>
+          <h3
+            class="font-display text-xl font-semibold text-stone-900 dark:text-stone-50 mb-2"
+          >
+            Leads rot in the inbox
+          </h3>
+          <div
+            class="text-green-600 dark:text-green-400 font-medium text-sm uppercase tracking-wide mt-6 mb-3"
+          >
+            Solution
+          </div>
+          <p class="text-stone-600 dark:text-stone-300">
+            Automated intake + routing gets leads to the right person
+            immediately.
+          </p>
+          <div
+            class="mt-6 pt-6 border-t border-stone-200 dark:border-stone-700 text-stone-900 dark:text-stone-50 font-semibold"
+          >
             → Same-day response, less missed revenue
           </div>
         </div>
-        <div class="bg-stone-50 rounded-xl p-8">
-          <div class="text-red-500 font-medium text-sm uppercase tracking-wide mb-3">Problem</div>
-          <h3 class="font-display text-xl font-semibold text-stone-900 mb-2">Teams duplicate work</h3>
-          <div class="text-green-600 font-medium text-sm uppercase tracking-wide mt-6 mb-3">Solution</div>
-          <p class="text-stone-600">Single source of truth workflows sync data automatically across tools.</p>
-          <div class="mt-6 pt-6 border-t border-stone-200 text-stone-900 font-semibold">
+        <div class="bg-stone-50 dark:bg-stone-800 rounded-xl p-8">
+          <div
+            class="text-red-500 dark:text-red-400 font-medium text-sm uppercase tracking-wide mb-3"
+          >
+            Problem
+          </div>
+          <h3
+            class="font-display text-xl font-semibold text-stone-900 dark:text-stone-50 mb-2"
+          >
+            Teams duplicate work
+          </h3>
+          <div
+            class="text-green-600 dark:text-green-400 font-medium text-sm uppercase tracking-wide mt-6 mb-3"
+          >
+            Solution
+          </div>
+          <p class="text-stone-600 dark:text-stone-300">
+            Single source of truth workflows sync data automatically across
+            tools.
+          </p>
+          <div
+            class="mt-6 pt-6 border-t border-stone-200 dark:border-stone-700 text-stone-900 dark:text-stone-50 font-semibold"
+          >
             → Fewer mistakes, less rework
           </div>
         </div>
-        <div class="bg-stone-50 rounded-xl p-8">
-          <div class="text-red-500 font-medium text-sm uppercase tracking-wide mb-3">Problem</div>
-          <h3 class="font-display text-xl font-semibold text-stone-900 mb-2">Reporting is a fire drill</h3>
-          <div class="text-green-600 font-medium text-sm uppercase tracking-wide mt-6 mb-3">Solution</div>
-          <p class="text-stone-600">Auto-updating dashboards and AI summaries generate reports on schedule.</p>
-          <div class="mt-6 pt-6 border-t border-stone-200 text-stone-900 font-semibold">
+        <div class="bg-stone-50 dark:bg-stone-800 rounded-xl p-8">
+          <div
+            class="text-red-500 dark:text-red-400 font-medium text-sm uppercase tracking-wide mb-3"
+          >
+            Problem
+          </div>
+          <h3
+            class="font-display text-xl font-semibold text-stone-900 dark:text-stone-50 mb-2"
+          >
+            Reporting is a fire drill
+          </h3>
+          <div
+            class="text-green-600 dark:text-green-400 font-medium text-sm uppercase tracking-wide mt-6 mb-3"
+          >
+            Solution
+          </div>
+          <p class="text-stone-600 dark:text-stone-300">
+            Auto-updating dashboards and AI summaries generate reports on
+            schedule.
+          </p>
+          <div
+            class="mt-6 pt-6 border-t border-stone-200 dark:border-stone-700 text-stone-900 dark:text-stone-50 font-semibold"
+          >
             → Always up-to-date visibility
           </div>
         </div>
       </div>
     </div>
   </section>
-  
+
   <!-- What I Build -->
   <section class="py-20">
     <div class="max-w-6xl mx-auto px-6">
-      <h2 class="font-display text-3xl font-bold text-stone-900 text-center mb-4">
+      <h2
+        class="font-display text-3xl font-bold text-stone-900 dark:text-stone-50 text-center mb-4"
+      >
         What I build
       </h2>
-      <p class="text-stone-600 text-center max-w-2xl mx-auto mb-16">
-        Systems that connect your apps, reduce manual work, and keep operations consistent.
+      <p
+        class="text-stone-600 dark:text-stone-300 text-center max-w-2xl mx-auto mb-16"
+      >
+        Systems that connect your apps, reduce manual work, and keep operations
+        consistent.
       </p>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <a href={`${base}services#automation`} class="group bg-white rounded-xl border border-stone-200 p-6 hover:border-copper hover:shadow-md transition-all">
-          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-amber-200 transition-colors">
-            <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+        <a
+          href={`${base}services#automation`}
+          class="group bg-white dark:bg-stone-800 rounded-xl border border-stone-200 dark:border-stone-700 p-6 hover:border-copper hover:shadow-md transition-all"
+        >
+          <div
+            class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-amber-200 transition-colors"
+          >
+            <svg
+              class="w-6 h-6 text-amber-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+              ></path>
             </svg>
           </div>
-          <h3 class="font-display text-lg font-semibold text-stone-900 mb-2">Workflow Automation</h3>
-          <p class="text-stone-600 text-sm">Zapier, Make, n8n, or custom scripts that connect your tools and eliminate copy-paste work.</p>
+          <h3
+            class="font-display text-lg font-semibold text-stone-900 dark:text-stone-50 mb-2"
+          >
+            Workflow Automation
+          </h3>
+          <p class="text-stone-600 dark:text-stone-300 text-sm">
+            Zapier, Make, n8n, or custom scripts that connect your tools and
+            eliminate copy-paste work.
+          </p>
         </a>
-        
-        <a href={`${base}services#agents`} class="group bg-white rounded-xl border border-stone-200 p-6 hover:border-copper hover:shadow-md transition-all">
-          <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-blue-200 transition-colors">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+
+        <a
+          href={`${base}services#agents`}
+          class="group bg-white dark:bg-stone-800 rounded-xl border border-stone-200 dark:border-stone-700 p-6 hover:border-copper hover:shadow-md transition-all"
+        >
+          <div
+            class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-blue-200 transition-colors"
+          >
+            <svg
+              class="w-6 h-6 text-blue-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+              ></path>
             </svg>
           </div>
-          <h3 class="font-display text-lg font-semibold text-stone-900 mb-2">Custom AI Agents</h3>
-          <p class="text-stone-600 text-sm">Email triage, ticket routing, document processing, and knowledge assistants built on Claude/GPT.</p>
+          <h3
+            class="font-display text-lg font-semibold text-stone-900 dark:text-stone-50 mb-2"
+          >
+            Custom AI Agents
+          </h3>
+          <p class="text-stone-600 dark:text-stone-300 text-sm">
+            Email triage, ticket routing, document processing, and knowledge
+            assistants built on Claude/GPT.
+          </p>
         </a>
-        
-        <a href={`${base}services#integrations`} class="group bg-white rounded-xl border border-stone-200 p-6 hover:border-copper hover:shadow-md transition-all">
-          <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-green-200 transition-colors">
-            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+
+        <a
+          href={`${base}services#integrations`}
+          class="group bg-white dark:bg-stone-800 rounded-xl border border-stone-200 dark:border-stone-700 p-6 hover:border-copper hover:shadow-md transition-all"
+        >
+          <div
+            class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-green-200 transition-colors"
+          >
+            <svg
+              class="w-6 h-6 text-green-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
+              ></path>
             </svg>
           </div>
-          <h3 class="font-display text-lg font-semibold text-stone-900 mb-2">Integrations</h3>
-          <p class="text-stone-600 text-sm">Connect APIs, webhooks, CRMs, spreadsheets, and databases into unified workflows.</p>
+          <h3
+            class="font-display text-lg font-semibold text-stone-900 dark:text-stone-50 mb-2"
+          >
+            Integrations
+          </h3>
+          <p class="text-stone-600 dark:text-stone-300 text-sm">
+            Connect APIs, webhooks, CRMs, spreadsheets, and databases into
+            unified workflows.
+          </p>
         </a>
-        
-        <a href={`${base}services#tools`} class="group bg-white rounded-xl border border-stone-200 p-6 hover:border-copper hover:shadow-md transition-all">
-          <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-purple-200 transition-colors">
-            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
+
+        <a
+          href={`${base}services#tools`}
+          class="group bg-white dark:bg-stone-800 rounded-xl border border-stone-200 dark:border-stone-700 p-6 hover:border-copper hover:shadow-md transition-all"
+        >
+          <div
+            class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-purple-200 transition-colors"
+          >
+            <svg
+              class="w-6 h-6 text-purple-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+              ></path>
             </svg>
           </div>
-          <h3 class="font-display text-lg font-semibold text-stone-900 mb-2">Internal Tools</h3>
-          <p class="text-stone-600 text-sm">Lightweight dashboards and admin panels that give your team visibility without overhead.</p>
+          <h3
+            class="font-display text-lg font-semibold text-stone-900 dark:text-stone-50 mb-2"
+          >
+            Internal Tools
+          </h3>
+          <p class="text-stone-600 dark:text-stone-300 text-sm">
+            Lightweight dashboards and admin panels that give your team
+            visibility without overhead.
+          </p>
         </a>
-        
-        <a href={`${base}services#reliability`} class="group bg-white rounded-xl border border-stone-200 p-6 hover:border-copper hover:shadow-md transition-all">
-          <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-red-200 transition-colors">
-            <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+
+        <a
+          href={`${base}services#reliability`}
+          class="group bg-white dark:bg-stone-800 rounded-xl border border-stone-200 dark:border-stone-700 p-6 hover:border-copper hover:shadow-md transition-all"
+        >
+          <div
+            class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-red-200 transition-colors"
+          >
+            <svg
+              class="w-6 h-6 text-red-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+              ></path>
             </svg>
           </div>
-          <h3 class="font-display text-lg font-semibold text-stone-900 mb-2">Reliability Layer</h3>
-          <p class="text-stone-600 text-sm">Logging, retries, error handling, monitoring, and versioning so your automation doesn't break silently.</p>
+          <h3
+            class="font-display text-lg font-semibold text-stone-900 dark:text-stone-50 mb-2"
+          >
+            Reliability Layer
+          </h3>
+          <p class="text-stone-600 dark:text-stone-300 text-sm">
+            Logging, retries, error handling, monitoring, and versioning so your
+            automation doesn't break silently.
+          </p>
         </a>
-        
-        <a href={`${base}services`} class="group bg-stone-900 rounded-xl p-6 hover:bg-stone-800 transition-all flex items-center justify-center">
+
+        <a
+          href={`${base}services`}
+          class="group bg-stone-900 rounded-xl p-6 hover:bg-stone-800 transition-all flex items-center justify-center"
+        >
           <div class="text-center">
             <span class="text-stone-50 font-semibold">View all services</span>
-            <svg class="w-5 h-5 text-stone-50 mx-auto mt-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            <svg
+              class="w-5 h-5 text-stone-50 mx-auto mt-2 group-hover:translate-x-1 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
             </svg>
           </div>
         </a>
       </div>
     </div>
   </section>
-  
+
   <!-- Process -->
   <section class="py-20 bg-stone-900 text-stone-50">
     <div class="max-w-6xl mx-auto px-6">
@@ -221,314 +520,647 @@ const base = import.meta.env.BASE_URL;
         How it works
       </h2>
       <p class="text-stone-400 text-center max-w-2xl mx-auto mb-16">
-        A straightforward process designed to get results fast without endless meetings.
+        A straightforward process designed to get results fast without endless
+        meetings.
       </p>
       <div class="grid md:grid-cols-5 gap-8">
         <div class="text-center">
-          <div class="w-12 h-12 bg-copper rounded-full flex items-center justify-center mx-auto mb-4 font-display font-bold text-lg">1</div>
+          <div
+            class="w-12 h-12 bg-copper rounded-full flex items-center justify-center mx-auto mb-4 font-display font-bold text-lg"
+          >
+            1
+          </div>
           <h3 class="font-semibold mb-2">Audit</h3>
-          <p class="text-stone-400 text-sm">Map your current process and identify bottlenecks</p>
+          <p class="text-stone-400 text-sm">
+            Map your current process and identify bottlenecks
+          </p>
         </div>
         <div class="text-center">
-          <div class="w-12 h-12 bg-copper rounded-full flex items-center justify-center mx-auto mb-4 font-display font-bold text-lg">2</div>
+          <div
+            class="w-12 h-12 bg-copper rounded-full flex items-center justify-center mx-auto mb-4 font-display font-bold text-lg"
+          >
+            2
+          </div>
           <h3 class="font-semibold mb-2">Prototype</h3>
-          <p class="text-stone-400 text-sm">Build a small win in days, not months</p>
+          <p class="text-stone-400 text-sm">
+            Build a small win in days, not months
+          </p>
         </div>
         <div class="text-center">
-          <div class="w-12 h-12 bg-copper rounded-full flex items-center justify-center mx-auto mb-4 font-display font-bold text-lg">3</div>
+          <div
+            class="w-12 h-12 bg-copper rounded-full flex items-center justify-center mx-auto mb-4 font-display font-bold text-lg"
+          >
+            3
+          </div>
           <h3 class="font-semibold mb-2">Harden</h3>
-          <p class="text-stone-400 text-sm">Add error handling, logs, and permissions</p>
+          <p class="text-stone-400 text-sm">
+            Add error handling, logs, and permissions
+          </p>
         </div>
         <div class="text-center">
-          <div class="w-12 h-12 bg-copper rounded-full flex items-center justify-center mx-auto mb-4 font-display font-bold text-lg">4</div>
+          <div
+            class="w-12 h-12 bg-copper rounded-full flex items-center justify-center mx-auto mb-4 font-display font-bold text-lg"
+          >
+            4
+          </div>
           <h3 class="font-semibold mb-2">Deploy</h3>
-          <p class="text-stone-400 text-sm">Launch with documentation and monitoring</p>
+          <p class="text-stone-400 text-sm">
+            Launch with documentation and monitoring
+          </p>
         </div>
         <div class="text-center">
-          <div class="w-12 h-12 bg-copper rounded-full flex items-center justify-center mx-auto mb-4 font-display font-bold text-lg">5</div>
+          <div
+            class="w-12 h-12 bg-copper rounded-full flex items-center justify-center mx-auto mb-4 font-display font-bold text-lg"
+          >
+            5
+          </div>
           <h3 class="font-semibold mb-2">Iterate</h3>
-          <p class="text-stone-400 text-sm">Monthly improvements based on real usage</p>
+          <p class="text-stone-400 text-sm">
+            Monthly improvements based on real usage
+          </p>
         </div>
       </div>
     </div>
   </section>
-  
+
   <!-- Work / Research -->
   <section id="examples" class="py-20">
     <div class="max-w-6xl mx-auto px-6">
-      <h2 class="font-display text-3xl font-bold text-stone-900 text-center mb-4">
+      <h2
+        class="font-display text-3xl font-bold text-stone-900 dark:text-stone-50 text-center mb-4"
+      >
         The Mnehmos Ecosystem
       </h2>
-      <p class="text-stone-600 text-center max-w-2xl mx-auto mb-16">
+      <p
+        class="text-stone-600 dark:text-stone-300 text-center max-w-2xl mx-auto mb-16"
+      >
         Building infrastructure for AI agents that interact with the real world.
       </p>
       <div class="grid md:grid-cols-2 gap-8">
-        
         <!-- Project 1: Multi-Agent Framework -->
-        <div class="bg-white rounded-xl border border-stone-200 p-8 hover:border-copper transition-colors group">
+        <div
+          class="bg-white dark:bg-stone-800 rounded-xl border border-stone-200 dark:border-stone-700 p-8 hover:border-copper transition-colors group"
+        >
           <div class="flex justify-between items-start mb-4">
-            <div class="text-xs uppercase tracking-wide text-copper font-bold">Framework</div>
-            <a href="https://github.com/Mnehmos/mnehmos.multi-agent.framework" class="text-stone-400 hover:text-stone-900 transition-colors">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            <div class="text-xs uppercase tracking-wide text-copper font-bold">
+              Framework
+            </div>
+            <a
+              href="https://github.com/Mnehmos/mnehmos.multi-agent.framework"
+              class="text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"
+                ><path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                ></path></svg
+              >
             </a>
           </div>
-          <h3 class="font-display text-xl font-semibold text-stone-900 mb-2 group-hover:text-copper transition-colors">Multi-Agent AI Framework</h3>
-          <p class="text-sm text-stone-600 mb-4">Universal specification for autonomous agents. Includes standardized protocols for memory, state management, and inter-agent communication.</p>
-          <div class="flex flex-wrap gap-2 text-xs text-stone-500">
-            <span class="bg-stone-100 px-2 py-1 rounded">500+ Stars</span>
-            <span class="bg-stone-100 px-2 py-1 rounded">Universal Spec</span>
-          </div>
-        </div>
-        
-        <!-- Project 2: OODA MCP -->
-        <div class="bg-white rounded-xl border border-stone-200 p-8 hover:border-copper transition-colors group">
-          <div class="flex justify-between items-start mb-4">
-            <div class="text-xs uppercase tracking-wide text-copper font-bold">MCP Server</div>
-            <a href="https://github.com/Mnehmos/mnehmos.ooda.mcp" class="text-stone-400 hover:text-stone-900 transition-colors">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            </a>
-          </div>
-          <h3 class="font-display text-xl font-semibold text-stone-900 mb-2 group-hover:text-copper transition-colors">OODA Architecture</h3>
-          <p class="text-sm text-stone-600 mb-4">Computer control and system operations server allowing agents to Observe, Orient, Decide, and Act directly on the OS layer.</p>
-          <div class="flex flex-wrap gap-2 text-xs text-stone-500">
-            <span class="bg-stone-100 px-2 py-1 rounded">System Control</span>
-            <span class="bg-stone-100 px-2 py-1 rounded">Agent Tools</span>
-          </div>
-        </div>
-        
-        <!-- Project 3: Quest Keeper -->
-        <div class="bg-white rounded-xl border border-stone-200 p-8 hover:border-copper transition-colors group">
-          <div class="flex justify-between items-start mb-4">
-            <div class="text-xs uppercase tracking-wide text-copper font-bold">Shipped Product</div>
-            <a href="https://github.com/Mnehmos/mnehmos.quest-keeper.game" class="text-stone-400 hover:text-stone-900 transition-colors">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            </a>
-          </div>
-          <h3 class="font-display text-xl font-semibold text-stone-900 mb-2 group-hover:text-copper transition-colors">Quest Keeper AI</h3>
-          <p class="text-sm text-stone-600 mb-4">AI-powered D&D assistant with 7 context layers. Local-first architecture protecting user campaign data.</p>
-          <div class="flex flex-wrap gap-2 text-xs text-stone-500">
-            <span class="bg-stone-100 px-2 py-1 rounded">React / Rust</span>
-            <span class="bg-stone-100 px-2 py-1 rounded">Context Aware</span>
-          </div>
-        </div>
-        
-        <!-- Project 4: RPG Engine -->
-        <div class="bg-white rounded-xl border border-stone-200 p-8 hover:border-copper transition-colors group">
-          <div class="flex justify-between items-start mb-4">
-            <div class="text-xs uppercase tracking-wide text-copper font-bold">Game Engine</div>
-            <a href="https://github.com/Mnehmos/mnehmos.rpg.mcp" class="text-stone-400 hover:text-stone-900 transition-colors">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            </a>
-          </div>
-          <h3 class="font-display text-xl font-semibold text-stone-900 mb-2 group-hover:text-copper transition-colors">RPG Engine MCP</h3>
-          <p class="text-sm text-stone-600 mb-4">Complete D&D 5e mechanics engine via Model Context Protocol. 145+ tools for dice rolling, combat, and entity management.</p>
-          <div class="flex flex-wrap gap-2 text-xs text-stone-500">
-            <span class="bg-stone-100 px-2 py-1 rounded">145 Tools</span>
-            <span class="bg-stone-100 px-2 py-1 rounded">Logic Engine</span>
+          <h3
+            class="font-display text-xl font-semibold text-stone-900 dark:text-stone-50 mb-2 group-hover:text-copper transition-colors"
+          >
+            Multi-Agent AI Framework
+          </h3>
+          <p class="text-sm text-stone-600 dark:text-stone-300 mb-4">
+            Universal specification for autonomous agents. Includes standardized
+            protocols for memory, state management, and inter-agent
+            communication.
+          </p>
+          <div
+            class="flex flex-wrap gap-2 text-xs text-stone-500 dark:text-stone-400"
+          >
+            <span class="bg-stone-100 dark:bg-stone-700 px-2 py-1 rounded"
+              >500+ Stars</span
+            >
+            <span class="bg-stone-100 dark:bg-stone-700 px-2 py-1 rounded"
+              >Universal Spec</span
+            >
           </div>
         </div>
 
+        <!-- Project 2: OODA MCP -->
+        <div
+          class="bg-white dark:bg-stone-800 rounded-xl border border-stone-200 dark:border-stone-700 p-8 hover:border-copper transition-colors group"
+        >
+          <div class="flex justify-between items-start mb-4">
+            <div class="text-xs uppercase tracking-wide text-copper font-bold">
+              MCP Server
+            </div>
+            <a
+              href="https://github.com/Mnehmos/mnehmos.ooda.mcp"
+              class="text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"
+                ><path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                ></path></svg
+              >
+            </a>
+          </div>
+          <h3
+            class="font-display text-xl font-semibold text-stone-900 dark:text-stone-50 mb-2 group-hover:text-copper transition-colors"
+          >
+            OODA Architecture
+          </h3>
+          <p class="text-sm text-stone-600 dark:text-stone-300 mb-4">
+            Computer control and system operations server allowing agents to
+            Observe, Orient, Decide, and Act directly on the OS layer.
+          </p>
+          <div
+            class="flex flex-wrap gap-2 text-xs text-stone-500 dark:text-stone-400"
+          >
+            <span class="bg-stone-100 dark:bg-stone-700 px-2 py-1 rounded"
+              >System Control</span
+            >
+            <span class="bg-stone-100 dark:bg-stone-700 px-2 py-1 rounded"
+              >Agent Tools</span
+            >
+          </div>
+        </div>
+
+        <!-- Project 3: Quest Keeper -->
+        <div
+          class="bg-white dark:bg-stone-800 rounded-xl border border-stone-200 dark:border-stone-700 p-8 hover:border-copper transition-colors group"
+        >
+          <div class="flex justify-between items-start mb-4">
+            <div class="text-xs uppercase tracking-wide text-copper font-bold">
+              Shipped Product
+            </div>
+            <a
+              href="https://github.com/Mnehmos/mnehmos.quest-keeper.game"
+              class="text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"
+                ><path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                ></path></svg
+              >
+            </a>
+          </div>
+          <h3
+            class="font-display text-xl font-semibold text-stone-900 dark:text-stone-50 mb-2 group-hover:text-copper transition-colors"
+          >
+            Quest Keeper AI
+          </h3>
+          <p class="text-sm text-stone-600 dark:text-stone-300 mb-4">
+            AI-powered D&D assistant with 7 context layers. Local-first
+            architecture protecting user campaign data.
+          </p>
+          <div
+            class="flex flex-wrap gap-2 text-xs text-stone-500 dark:text-stone-400"
+          >
+            <span class="bg-stone-100 dark:bg-stone-700 px-2 py-1 rounded"
+              >React / Rust</span
+            >
+            <span class="bg-stone-100 dark:bg-stone-700 px-2 py-1 rounded"
+              >Context Aware</span
+            >
+          </div>
+        </div>
+
+        <!-- Project 4: RPG Engine -->
+        <div
+          class="bg-white dark:bg-stone-800 rounded-xl border border-stone-200 dark:border-stone-700 p-8 hover:border-copper transition-colors group"
+        >
+          <div class="flex justify-between items-start mb-4">
+            <div class="text-xs uppercase tracking-wide text-copper font-bold">
+              Game Engine
+            </div>
+            <a
+              href="https://github.com/Mnehmos/mnehmos.rpg.mcp"
+              class="text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"
+                ><path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                ></path></svg
+              >
+            </a>
+          </div>
+          <h3
+            class="font-display text-xl font-semibold text-stone-900 dark:text-stone-50 mb-2 group-hover:text-copper transition-colors"
+          >
+            RPG Engine MCP
+          </h3>
+          <p class="text-sm text-stone-600 dark:text-stone-300 mb-4">
+            Complete D&D 5e mechanics engine via Model Context Protocol. 145+
+            tools for dice rolling, combat, and entity management.
+          </p>
+          <div
+            class="flex flex-wrap gap-2 text-xs text-stone-500 dark:text-stone-400"
+          >
+            <span class="bg-stone-100 dark:bg-stone-700 px-2 py-1 rounded"
+              >145 Tools</span
+            >
+            <span class="bg-stone-100 dark:bg-stone-700 px-2 py-1 rounded"
+              >Logic Engine</span
+            >
+          </div>
+        </div>
       </div>
     </div>
   </section>
-  
+
   <!-- Packages -->
-  <section class="py-20 bg-white">
+  <section class="py-20 bg-white dark:bg-stone-900">
     <div class="max-w-6xl mx-auto px-6">
-      <h2 class="font-display text-3xl font-bold text-stone-900 text-center mb-4">
+      <h2
+        class="font-display text-3xl font-bold text-stone-900 dark:text-stone-50 text-center mb-4"
+      >
         Packages
       </h2>
-      <p class="text-stone-600 text-center max-w-2xl mx-auto mb-16">
-        Start small and expand as you see results. Every project includes documentation and handoff.
+      <p
+        class="text-stone-600 dark:text-stone-300 text-center max-w-2xl mx-auto mb-16"
+      >
+        Start small and expand as you see results. Every project includes
+        documentation and handoff.
       </p>
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-stone-50 rounded-xl p-8">
-          <h3 class="font-display text-xl font-semibold text-stone-900 mb-2">Quick Win</h3>
-          <p class="text-stone-500 text-sm mb-6">Fixed scope, fast delivery</p>
-          <ul class="space-y-3 text-sm text-stone-600 mb-8">
+        <div class="bg-stone-50 dark:bg-stone-800 rounded-xl p-8">
+          <h3
+            class="font-display text-xl font-semibold text-stone-900 dark:text-stone-50 mb-2"
+          >
+            Quick Win
+          </h3>
+          <p class="text-stone-500 dark:text-stone-400 text-sm mb-6">
+            Fixed scope, fast delivery
+          </p>
+          <ul class="space-y-3 text-sm text-stone-600 dark:text-stone-300 mb-8">
             <li class="flex items-start gap-2">
-              <svg class="w-5 h-5 text-copper shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              <svg
+                class="w-5 h-5 text-copper shrink-0 mt-0.5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"></path>
               </svg>
               1 workflow or integration
             </li>
             <li class="flex items-start gap-2">
-              <svg class="w-5 h-5 text-copper shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              <svg
+                class="w-5 h-5 text-copper shrink-0 mt-0.5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"></path>
               </svg>
               Basic logging
             </li>
             <li class="flex items-start gap-2">
-              <svg class="w-5 h-5 text-copper shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              <svg
+                class="w-5 h-5 text-copper shrink-0 mt-0.5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"></path>
               </svg>
               Documentation
             </li>
             <li class="flex items-start gap-2">
-              <svg class="w-5 h-5 text-copper shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              <svg
+                class="w-5 h-5 text-copper shrink-0 mt-0.5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"></path>
               </svg>
               1 week turnaround
             </li>
           </ul>
-          <a href={`${base}contact`} class="block text-center bg-stone-900 text-stone-50 px-6 py-3 rounded-lg font-semibold hover:bg-stone-800 transition-colors">
+          <a
+            href={`${base}contact`}
+            class="block text-center bg-stone-900 text-stone-50 px-6 py-3 rounded-lg font-semibold hover:bg-stone-800 transition-colors"
+          >
             Start here
           </a>
         </div>
-        
+
         <div class="bg-stone-900 rounded-xl p-8 text-stone-50 relative">
-          <div class="absolute top-0 right-6 -translate-y-1/2 bg-copper text-stone-50 text-xs font-semibold px-3 py-1 rounded-full">
+          <div
+            class="absolute top-0 right-6 -translate-y-1/2 bg-copper text-stone-50 text-xs font-semibold px-3 py-1 rounded-full"
+          >
             Most popular
           </div>
           <h3 class="font-display text-xl font-semibold mb-2">Ops Upgrade</h3>
           <p class="text-stone-400 text-sm mb-6">Comprehensive automation</p>
           <ul class="space-y-3 text-sm text-stone-300 mb-8">
             <li class="flex items-start gap-2">
-              <svg class="w-5 h-5 text-copper shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              <svg
+                class="w-5 h-5 text-copper shrink-0 mt-0.5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"></path>
               </svg>
               3-5 connected workflows
             </li>
             <li class="flex items-start gap-2">
-              <svg class="w-5 h-5 text-copper shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              <svg
+                class="w-5 h-5 text-copper shrink-0 mt-0.5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"></path>
               </svg>
               Dashboard + reporting
             </li>
             <li class="flex items-start gap-2">
-              <svg class="w-5 h-5 text-copper shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              <svg
+                class="w-5 h-5 text-copper shrink-0 mt-0.5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"></path>
               </svg>
               Error handling + monitoring
             </li>
             <li class="flex items-start gap-2">
-              <svg class="w-5 h-5 text-copper shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              <svg
+                class="w-5 h-5 text-copper shrink-0 mt-0.5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"></path>
               </svg>
               Training + handoff docs
             </li>
             <li class="flex items-start gap-2">
-              <svg class="w-5 h-5 text-copper shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              <svg
+                class="w-5 h-5 text-copper shrink-0 mt-0.5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"></path>
               </svg>
               2-3 week delivery
             </li>
           </ul>
-          <a href={`${base}contact`} class="block text-center bg-copper text-stone-50 px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity">
+          <a
+            href={`${base}contact`}
+            class="block text-center bg-copper text-stone-50 px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+          >
             Get a quote
           </a>
         </div>
-        
-        <div class="bg-stone-50 rounded-xl p-8">
-          <h3 class="font-display text-xl font-semibold text-stone-900 mb-2">Agent Buildout</h3>
-          <p class="text-stone-500 text-sm mb-6">Custom AI agent deployment</p>
-          <ul class="space-y-3 text-sm text-stone-600 mb-8">
+
+        <div class="bg-stone-50 dark:bg-stone-800 rounded-xl p-8">
+          <h3
+            class="font-display text-xl font-semibold text-stone-900 dark:text-stone-50 mb-2"
+          >
+            Agent Buildout
+          </h3>
+          <p class="text-stone-500 dark:text-stone-400 text-sm mb-6">
+            Custom AI agent deployment
+          </p>
+          <ul class="space-y-3 text-sm text-stone-600 dark:text-stone-300 mb-8">
             <li class="flex items-start gap-2">
-              <svg class="w-5 h-5 text-copper shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              <svg
+                class="w-5 h-5 text-copper shrink-0 mt-0.5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"></path>
               </svg>
               Custom AI agent (Claude/GPT)
             </li>
             <li class="flex items-start gap-2">
-              <svg class="w-5 h-5 text-copper shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              <svg
+                class="w-5 h-5 text-copper shrink-0 mt-0.5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"></path>
               </svg>
               Guardrails + safety testing
             </li>
             <li class="flex items-start gap-2">
-              <svg class="w-5 h-5 text-copper shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              <svg
+                class="w-5 h-5 text-copper shrink-0 mt-0.5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"></path>
               </svg>
               Evaluation framework
             </li>
             <li class="flex items-start gap-2">
-              <svg class="w-5 h-5 text-copper shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              <svg
+                class="w-5 h-5 text-copper shrink-0 mt-0.5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"></path>
               </svg>
               Production monitoring
             </li>
           </ul>
-          <a href={`${base}contact`} class="block text-center bg-stone-900 text-stone-50 px-6 py-3 rounded-lg font-semibold hover:bg-stone-800 transition-colors">
+          <a
+            href={`${base}contact`}
+            class="block text-center bg-stone-900 text-stone-50 px-6 py-3 rounded-lg font-semibold hover:bg-stone-800 transition-colors"
+          >
             Let's talk
           </a>
         </div>
       </div>
-      <p class="text-center text-stone-500 mt-8 text-sm">
+      <p class="text-center text-stone-500 dark:text-stone-400 mt-8 text-sm">
         Not sure which fits? Start with Quick Win—we can always expand.
       </p>
     </div>
   </section>
-  
+
   <!-- FAQ -->
   <section class="py-20">
     <div class="max-w-3xl mx-auto px-6">
-      <h2 class="font-display text-3xl font-bold text-stone-900 text-center mb-16">
+      <h2
+        class="font-display text-3xl font-bold text-stone-900 dark:text-stone-50 text-center mb-16"
+      >
         Common questions
       </h2>
       <div class="space-y-6">
-        <details class="group bg-white rounded-xl border border-stone-200 p-6">
-          <summary class="flex items-center justify-between cursor-pointer font-semibold text-stone-900">
+        <details
+          class="group bg-white dark:bg-stone-800 rounded-xl border border-stone-200 dark:border-stone-700 p-6"
+        >
+          <summary
+            class="flex items-center justify-between cursor-pointer font-semibold text-stone-900 dark:text-stone-50"
+          >
             Will this replace my staff?
-            <svg class="w-5 h-5 text-stone-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            <svg
+              class="w-5 h-5 text-stone-400 group-open:rotate-180 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"></path>
             </svg>
           </summary>
-          <p class="mt-4 text-stone-600">
-            No. The goal is to remove repetitive, boring tasks so your people can focus on work that actually requires human judgment—customer relationships, creative problem-solving, strategic decisions. Automation handles the copy-paste; humans handle the thinking.
+          <p class="mt-4 text-stone-600 dark:text-stone-300">
+            No. The goal is to remove repetitive, boring tasks so your people
+            can focus on work that actually requires human judgment—customer
+            relationships, creative problem-solving, strategic decisions.
+            Automation handles the copy-paste; humans handle the thinking.
           </p>
         </details>
-        
-        <details class="group bg-white rounded-xl border border-stone-200 p-6">
-          <summary class="flex items-center justify-between cursor-pointer font-semibold text-stone-900">
+
+        <details
+          class="group bg-white dark:bg-stone-800 rounded-xl border border-stone-200 dark:border-stone-700 p-6"
+        >
+          <summary
+            class="flex items-center justify-between cursor-pointer font-semibold text-stone-900 dark:text-stone-50"
+          >
             Do I need to share sensitive data?
-            <svg class="w-5 h-5 text-stone-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            <svg
+              class="w-5 h-5 text-stone-400 group-open:rotate-180 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"></path>
             </svg>
           </summary>
-          <p class="mt-4 text-stone-600">
-            Only what's needed for the specific automation. Many builds can run entirely within your own systems using API keys you control. For AI agents, we can use local models or enterprise tiers with data privacy guarantees. I'll explain exactly what access is needed and why before we start.
+          <p class="mt-4 text-stone-600 dark:text-stone-300">
+            Only what's needed for the specific automation. Many builds can run
+            entirely within your own systems using API keys you control. For AI
+            agents, we can use local models or enterprise tiers with data
+            privacy guarantees. I'll explain exactly what access is needed and
+            why before we start.
           </p>
         </details>
-        
-        <details class="group bg-white rounded-xl border border-stone-200 p-6">
-          <summary class="flex items-center justify-between cursor-pointer font-semibold text-stone-900">
+
+        <details
+          class="group bg-white dark:bg-stone-800 rounded-xl border border-stone-200 dark:border-stone-700 p-6"
+        >
+          <summary
+            class="flex items-center justify-between cursor-pointer font-semibold text-stone-900 dark:text-stone-50"
+          >
             What tools do you use?
-            <svg class="w-5 h-5 text-stone-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            <svg
+              class="w-5 h-5 text-stone-400 group-open:rotate-180 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"></path>
             </svg>
           </summary>
-          <p class="mt-4 text-stone-600">
-            Whatever fits the job. For simple automations: Zapier, Make, or n8n. For complex workflows: custom code deployed on Railway, Vercel, or your own servers. For AI: Claude, GPT-4, or local models depending on your privacy requirements. No lock-in—you own everything I build.
+          <p class="mt-4 text-stone-600 dark:text-stone-300">
+            Whatever fits the job. For simple automations: Zapier, Make, or n8n.
+            For complex workflows: custom code deployed on Railway, Vercel, or
+            your own servers. For AI: Claude, GPT-4, or local models depending
+            on your privacy requirements. No lock-in—you own everything I build.
           </p>
         </details>
-        
-        <details class="group bg-white rounded-xl border border-stone-200 p-6">
-          <summary class="flex items-center justify-between cursor-pointer font-semibold text-stone-900">
+
+        <details
+          class="group bg-white dark:bg-stone-800 rounded-xl border border-stone-200 dark:border-stone-700 p-6"
+        >
+          <summary
+            class="flex items-center justify-between cursor-pointer font-semibold text-stone-900 dark:text-stone-50"
+          >
             Can you work with my existing CRM / tools?
-            <svg class="w-5 h-5 text-stone-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            <svg
+              class="w-5 h-5 text-stone-400 group-open:rotate-180 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"></path>
             </svg>
           </summary>
-          <p class="mt-4 text-stone-600">
-            Yes—if it has an API, webhook support, or even just CSV export, we can connect it. I've integrated with HubSpot, Salesforce, Airtable, Google Sheets, Notion, Slack, QuickBooks, and dozens of industry-specific tools. If you're not sure, send me a link and I'll tell you what's possible.
+          <p class="mt-4 text-stone-600 dark:text-stone-300">
+            Yes—if it has an API, webhook support, or even just CSV export, we
+            can connect it. I've integrated with HubSpot, Salesforce, Airtable,
+            Google Sheets, Notion, Slack, QuickBooks, and dozens of
+            industry-specific tools. If you're not sure, send me a link and I'll
+            tell you what's possible.
           </p>
         </details>
-        
-        <details class="group bg-white rounded-xl border border-stone-200 p-6">
-          <summary class="flex items-center justify-between cursor-pointer font-semibold text-stone-900">
+
+        <details
+          class="group bg-white dark:bg-stone-800 rounded-xl border border-stone-200 dark:border-stone-700 p-6"
+        >
+          <summary
+            class="flex items-center justify-between cursor-pointer font-semibold text-stone-900 dark:text-stone-50"
+          >
             What if something breaks?
-            <svg class="w-5 h-5 text-stone-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            <svg
+              class="w-5 h-5 text-stone-400 group-open:rotate-180 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"></path>
             </svg>
           </summary>
-          <p class="mt-4 text-stone-600">
-            Every build includes logging, error handling, and alerts. You'll know when something fails before it becomes a problem. I also provide documentation so you or your team can troubleshoot common issues. For ongoing support, I offer monthly retainer options.
+          <p class="mt-4 text-stone-600 dark:text-stone-300">
+            Every build includes logging, error handling, and alerts. You'll
+            know when something fails before it becomes a problem. I also
+            provide documentation so you or your team can troubleshoot common
+            issues. For ongoing support, I offer monthly retainer options.
           </p>
         </details>
       </div>
     </div>
   </section>
-  
+
   <!-- Final CTA -->
   <section class="py-20 bg-stone-900 text-stone-50">
     <div class="max-w-3xl mx-auto px-6 text-center">
@@ -538,10 +1170,22 @@ const base = import.meta.env.BASE_URL;
       <p class="text-xl text-stone-400 mb-8">
         I'll show you what to automate first.
       </p>
-      <a href={`${base}contact`} class="inline-flex items-center justify-center gap-2 bg-copper text-stone-50 px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity">
+      <a
+        href={`${base}contact`}
+        class="inline-flex items-center justify-center gap-2 bg-copper text-stone-50 px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity"
+      >
         Book a free 20-minute call
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        <svg
+          class="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
         </svg>
       </a>
     </div>

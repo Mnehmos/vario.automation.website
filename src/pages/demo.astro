@@ -1,23 +1,32 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 const base = import.meta.env.BASE_URL;
 ---
 
-<Layout title="MSHA Compliance Agent Demo" description="Live demonstration of AI-powered MSHA mine safety compliance assistant. Ask questions about training requirements, safety regulations, and compliance procedures.">
-  
+<Layout
+  title="MSHA Compliance Agent Demo"
+  description="Live demonstration of AI-powered MSHA mine safety compliance assistant. Ask questions about training requirements, safety regulations, and compliance procedures."
+>
   <!-- Hero Section -->
-  <section class="bg-gradient-to-b from-stone-100 to-stone-50 py-16">
+  <section
+    class="bg-gradient-to-b from-stone-100 to-stone-50 dark:from-stone-900 dark:to-stone-950 py-16"
+  >
     <div class="max-w-4xl mx-auto px-6">
       <div class="text-center">
-        <span class="inline-block px-3 py-1 bg-copper/10 text-copper rounded-full text-sm font-medium mb-4">
+        <span
+          class="inline-block px-3 py-1 bg-copper/10 text-copper rounded-full text-sm font-medium mb-4"
+        >
           Live Demo
         </span>
-        <h1 class="font-display text-4xl md:text-5xl font-bold text-stone-900 mb-4">
+        <h1
+          class="font-display text-4xl md:text-5xl font-bold text-stone-900 dark:text-stone-50 mb-4"
+        >
           MSHA Compliance Agent
         </h1>
-        <p class="text-lg text-stone-600 max-w-2xl mx-auto">
-          Ask questions about mine safety regulations, training requirements, and compliance procedures. 
-          Powered by RAG (Retrieval-Augmented Generation) on official MSHA documentation.
+        <p class="text-lg text-stone-600 dark:text-stone-300 max-w-2xl mx-auto">
+          Ask questions about mine safety regulations, training requirements,
+          and compliance procedures. Powered by RAG (Retrieval-Augmented
+          Generation) on official MSHA documentation.
         </p>
       </div>
     </div>
@@ -26,73 +35,120 @@ const base = import.meta.env.BASE_URL;
   <!-- Chat Interface -->
   <section class="py-8 pb-24">
     <div class="max-w-4xl mx-auto px-6">
-      
       <!-- Status Bar -->
-      <div class="flex items-center justify-between mb-4 p-3 bg-stone-100 rounded-lg">
+      <div
+        class="flex items-center justify-between mb-4 p-3 bg-stone-100 dark:bg-stone-800 rounded-lg"
+      >
         <div class="flex items-center gap-2">
-          <span id="status-dot" class="w-2 h-2 rounded-full bg-emerald-500"></span>
-          <span id="status-text" class="text-sm text-stone-600">Ready</span>
+          <span id="status-dot" class="w-2 h-2 rounded-full bg-emerald-500"
+          ></span>
+          <span
+            id="status-text"
+            class="text-sm text-stone-600 dark:text-stone-300">Ready</span
+          >
         </div>
-        <div class="text-sm text-stone-500">
+        <div class="text-sm text-stone-500 dark:text-stone-400">
           <span class="font-medium">545+</span> indexed chunks • Hybrid search
         </div>
       </div>
 
       <!-- Chat Container -->
-      <div class="bg-white rounded-xl border border-stone-200 shadow-sm overflow-hidden">
-        
+      <div
+        class="bg-white dark:bg-stone-800 rounded-xl border border-stone-200 dark:border-stone-700 shadow-sm overflow-hidden"
+      >
         <!-- Messages Area -->
         <div id="messages" class="h-[500px] overflow-y-auto p-6 space-y-4">
-          
           <!-- Welcome Message -->
           <div class="flex gap-3">
-            <div class="w-8 h-8 rounded-full bg-copper/10 flex items-center justify-center flex-shrink-0">
-              <svg class="w-4 h-4 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            <div
+              class="w-8 h-8 rounded-full bg-copper/10 flex items-center justify-center flex-shrink-0"
+            >
+              <svg
+                class="w-4 h-4 text-copper"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                ></path>
               </svg>
             </div>
             <div class="flex-1">
-              <div class="bg-stone-50 rounded-lg p-4">
-                <p class="text-stone-800 mb-3">
-                  Welcome! I'm an AI assistant trained on MSHA mine safety regulations. I can help you with:
+              <div class="bg-stone-50 dark:bg-stone-700 rounded-lg p-4">
+                <p class="text-stone-800 dark:text-stone-100 mb-3">
+                  Welcome! I'm an AI assistant trained on MSHA mine safety
+                  regulations. I can help you with:
                 </p>
-                <ul class="text-stone-600 space-y-1 mb-4">
-                  <li>• <strong>Part 46 & 48 training requirements</strong> - New miner, annual refresher, task training</li>
-                  <li>• <strong>Safety standards</strong> - Equipment, ventilation, electrical, explosives</li>
-                  <li>• <strong>Compliance procedures</strong> - Record keeping, documentation, inspections</li>
-                  <li>• <strong>Definitions</strong> - Experienced miner, competent person, qualified trainer</li>
+                <ul class="text-stone-600 dark:text-stone-300 space-y-1 mb-4">
+                  <li>
+                    • <strong>Part 46 & 48 training requirements</strong> - New miner,
+                    annual refresher, task training
+                  </li>
+                  <li>
+                    • <strong>Safety standards</strong> - Equipment, ventilation,
+                    electrical, explosives
+                  </li>
+                  <li>
+                    • <strong>Compliance procedures</strong> - Record keeping, documentation,
+                    inspections
+                  </li>
+                  <li>
+                    • <strong>Definitions</strong> - Experienced miner, competent
+                    person, qualified trainer
+                  </li>
                 </ul>
-                <p class="text-stone-500 text-sm">
+                <p class="text-stone-500 dark:text-stone-400 text-sm">
                   Try one of the example questions below, or ask your own.
                 </p>
               </div>
             </div>
           </div>
-          
         </div>
 
         <!-- Example Questions -->
         <div id="examples" class="px-6 pb-4 flex flex-wrap gap-2">
-          <button class="example-btn px-3 py-1.5 text-sm bg-stone-100 hover:bg-stone-200 text-stone-700 rounded-full transition-colors">What training does a new miner need under Part 46?</button>
-          <button class="example-btn px-3 py-1.5 text-sm bg-stone-100 hover:bg-stone-200 text-stone-700 rounded-full transition-colors">Who qualifies as an experienced miner?</button>
-          <button class="example-btn px-3 py-1.5 text-sm bg-stone-100 hover:bg-stone-200 text-stone-700 rounded-full transition-colors">How often is annual refresher training required?</button>
+          <button
+            class="example-btn px-3 py-1.5 text-sm bg-stone-100 dark:bg-stone-700 hover:bg-stone-200 dark:hover:bg-stone-600 text-stone-700 dark:text-stone-200 rounded-full transition-colors"
+            >What training does a new miner need under Part 46?</button
+          >
+          <button
+            class="example-btn px-3 py-1.5 text-sm bg-stone-100 dark:bg-stone-700 hover:bg-stone-200 dark:hover:bg-stone-600 text-stone-700 dark:text-stone-200 rounded-full transition-colors"
+            >Who qualifies as an experienced miner?</button
+          >
+          <button
+            class="example-btn px-3 py-1.5 text-sm bg-stone-100 dark:bg-stone-700 hover:bg-stone-200 dark:hover:bg-stone-600 text-stone-700 dark:text-stone-200 rounded-full transition-colors"
+            >How often is annual refresher training required?</button
+          >
         </div>
 
         <!-- Input Area -->
-        <div class="border-t border-stone-200 p-4">
+        <div class="border-t border-stone-200 dark:border-stone-700 p-4">
           <div class="flex gap-3">
-            <textarea 
-              id="user-input" 
+            <textarea
+              id="user-input"
               placeholder="Ask about MSHA regulations..."
               rows="2"
-              class="flex-1 px-4 py-3 bg-stone-50 border border-stone-200 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-copper/50 focus:border-copper"
+              class="flex-1 px-4 py-3 bg-stone-50 dark:bg-stone-700 border border-stone-200 dark:border-stone-600 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-copper/50 focus:border-copper text-stone-900 dark:text-stone-100"
             ></textarea>
-            <button 
+            <button
               id="send-btn"
               class="px-4 py-3 bg-copper hover:bg-copper-light text-white rounded-lg font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
               </svg>
             </button>
           </div>
@@ -101,33 +157,50 @@ const base = import.meta.env.BASE_URL;
 
       <!-- Info Cards -->
       <div class="grid md:grid-cols-3 gap-4 mt-8">
-        <div class="bg-white p-4 rounded-lg border border-stone-200">
+        <div
+          class="bg-white dark:bg-stone-800 p-4 rounded-lg border border-stone-200 dark:border-stone-700"
+        >
           <div class="text-copper font-display font-bold text-2xl">545+</div>
-          <div class="text-stone-600 text-sm">Document chunks indexed</div>
+          <div class="text-stone-600 dark:text-stone-300 text-sm">
+            Document chunks indexed
+          </div>
         </div>
-        <div class="bg-white p-4 rounded-lg border border-stone-200">
-          <div class="text-copper font-display font-bold text-2xl">Part 46 & 48</div>
-          <div class="text-stone-600 text-sm">Training regulations covered</div>
+        <div
+          class="bg-white dark:bg-stone-800 p-4 rounded-lg border border-stone-200 dark:border-stone-700"
+        >
+          <div class="text-copper font-display font-bold text-2xl">
+            Part 46 & 48
+          </div>
+          <div class="text-stone-600 dark:text-stone-300 text-sm">
+            Training regulations covered
+          </div>
         </div>
-        <div class="bg-white p-4 rounded-lg border border-stone-200">
+        <div
+          class="bg-white dark:bg-stone-800 p-4 rounded-lg border border-stone-200 dark:border-stone-700"
+        >
           <div class="text-copper font-display font-bold text-2xl">RAG</div>
-          <div class="text-stone-600 text-sm">Retrieval-augmented generation</div>
+          <div class="text-stone-600 dark:text-stone-300 text-sm">
+            Retrieval-augmented generation
+          </div>
         </div>
       </div>
 
       <!-- Technical Note -->
-      <div class="mt-8 p-4 bg-stone-100 rounded-lg">
-        <h3 class="font-semibold text-stone-800 mb-2">How it works</h3>
-        <p class="text-stone-600 text-sm">
-          This demo uses <strong>Retrieval-Augmented Generation (RAG)</strong>. When you ask a question, 
-          the system searches through indexed MSHA documents using semantic similarity, retrieves the most 
-          relevant passages, and uses an AI model to synthesize an accurate answer with citations. 
-          The knowledge base includes official MSHA Part 46 and Part 48 training materials.
+      <div class="mt-8 p-4 bg-stone-100 dark:bg-stone-800 rounded-lg">
+        <h3 class="font-semibold text-stone-800 dark:text-stone-100 mb-2">
+          How it works
+        </h3>
+        <p class="text-stone-600 dark:text-stone-300 text-sm">
+          This demo uses <strong>Retrieval-Augmented Generation (RAG)</strong>.
+          When you ask a question, the system searches through indexed MSHA
+          documents using semantic similarity, retrieves the most relevant
+          passages, and uses an AI model to synthesize an accurate answer with
+          citations. The knowledge base includes official MSHA Part 46 and Part
+          48 training materials.
         </p>
       </div>
     </div>
   </section>
-
 </Layout>
 
 <!-- Local config loader - only works in dev, file doesn't exist in production -->
@@ -135,68 +208,85 @@ const base = import.meta.env.BASE_URL;
 
 <style is:global>
   .bg-copper-light {
-    background-color: #D4956A;
+    background-color: #d4956a;
   }
-  
+
   #messages::-webkit-scrollbar {
     width: 6px;
   }
-  
+
   #messages::-webkit-scrollbar-track {
     background: transparent;
   }
-  
+
   #messages::-webkit-scrollbar-thumb {
     background: #d6d3d1;
     border-radius: 3px;
   }
-  
+
   .message-user .bubble {
-    background: linear-gradient(135deg, #B87333, #D4956A);
+    background: linear-gradient(135deg, #b87333, #d4956a);
     color: white;
   }
-  
+
   .message-assistant .bubble {
     background: #f5f5f4;
     color: #1c1917;
   }
-  
+
   .typing-indicator {
     display: flex;
     gap: 4px;
     padding: 12px 16px;
   }
-  
+
   .typing-dot {
     width: 8px;
     height: 8px;
-    background: #B87333;
+    background: #b87333;
     border-radius: 50%;
     animation: typing 1.4s infinite ease-in-out;
   }
-  
-  .typing-dot:nth-child(2) { animation-delay: 0.2s; }
-  .typing-dot:nth-child(3) { animation-delay: 0.4s; }
-  
-  @keyframes typing {
-    0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
-    30% { transform: translateY(-4px); opacity: 1; }
+
+  .typing-dot:nth-child(2) {
+    animation-delay: 0.2s;
   }
-  
+  .typing-dot:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+
+  @keyframes typing {
+    0%,
+    60%,
+    100% {
+      transform: translateY(0);
+      opacity: 0.4;
+    }
+    30% {
+      transform: translateY(-4px);
+      opacity: 1;
+    }
+  }
+
   .generating-placeholder {
     color: #78716c;
     font-style: italic;
     animation: pulse 1.5s ease-in-out infinite;
   }
-  
+
   @keyframes pulse {
-    0%, 100% { opacity: 0.5; }
-    50% { opacity: 1; }
+    0%,
+    100% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
   }
-  
+
   .source-citation {
     display: inline-block;
-    background: #B87333;
+    background: #b87333;
     color: white;
     font-size: 10px;
     padding: 1px 6px;
@@ -204,10 +294,10 @@ const base = import.meta.env.BASE_URL;
     margin-left: 4px;
     vertical-align: super;
   }
-  
+
   .source-btn {
     display: inline;
-    background: #B87333;
+    background: #b87333;
     color: white;
     font-size: 11px;
     padding: 1px 6px;
@@ -219,23 +309,23 @@ const base = import.meta.env.BASE_URL;
     font-weight: 600;
     transition: all 0.2s;
   }
-  
+
   .source-btn:hover {
     background: #a06429;
     transform: scale(1.1);
   }
-  
+
   .source-modal-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1000;
     padding: 1rem;
   }
-  
+
   .source-modal {
     background: white;
     border-radius: 12px;
@@ -243,24 +333,24 @@ const base = import.meta.env.BASE_URL;
     width: 100%;
     max-height: 80vh;
     overflow: hidden;
-    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   }
-  
+
   .source-modal-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
-    background: linear-gradient(to right, #B87333, #d4956b);
+    background: linear-gradient(to right, #b87333, #d4956b);
     color: white;
   }
-  
+
   .source-modal-header h3 {
     margin: 0;
     font-size: 1.1rem;
     font-weight: 600;
   }
-  
+
   .source-modal-close {
     background: none;
     border: none;
@@ -270,7 +360,7 @@ const base = import.meta.env.BASE_URL;
     padding: 0;
     line-height: 1;
   }
-  
+
   .source-modal-meta {
     display: flex;
     gap: 1rem;
@@ -279,16 +369,16 @@ const base = import.meta.env.BASE_URL;
     border-bottom: 1px solid #e7e5e4;
     font-size: 0.85rem;
   }
-  
+
   .source-score {
-    color: #B87333;
+    color: #b87333;
     font-weight: 600;
   }
-  
+
   .source-id {
     color: #78716c;
   }
-  
+
   .source-modal-content {
     padding: 1.5rem;
     max-height: 50vh;
@@ -296,12 +386,12 @@ const base = import.meta.env.BASE_URL;
     line-height: 1.6;
     color: #44403c;
   }
-  
+
   .source-modal-content p {
     margin: 0;
     white-space: pre-wrap;
   }
-  
+
   .source-name {
     font-weight: 600;
     color: #44403c;
@@ -309,7 +399,7 @@ const base = import.meta.env.BASE_URL;
     margin-bottom: 0.5rem;
     display: block;
   }
-  
+
   .source-type {
     display: inline-block;
     background: #e7e5e4;
@@ -320,23 +410,23 @@ const base = import.meta.env.BASE_URL;
     font-weight: 600;
     margin-right: 0.5rem;
   }
-  
+
   .source-actions {
     padding: 0.75rem 1.5rem;
     border-bottom: 1px solid #e7e5e4;
     background: #fafaf9;
   }
-  
+
   .source-link {
     display: inline-flex;
     align-items: center;
-    color: #B87333;
+    color: #b87333;
     font-weight: 500;
     text-decoration: none;
     font-size: 0.9rem;
     transition: color 0.2s;
   }
-  
+
   .source-link:hover {
     color: #a06429;
     text-decoration: underline;
@@ -346,38 +436,40 @@ const base = import.meta.env.BASE_URL;
 <script>
   // Configuration - RAG server handles everything including AI chat
   const CONFIG = {
-    ragServer: window.LOCAL_CONFIG?.RAG_SERVER || 'https://vario-automation-production.up.railway.app'
+    ragServer:
+      window.LOCAL_CONFIG?.RAG_SERVER ||
+      "https://vario-automation-production.up.railway.app",
   };
 
   class MSHADemo {
     constructor() {
-      this.messagesEl = document.getElementById('messages');
-      this.inputEl = document.getElementById('user-input');
-      this.sendBtn = document.getElementById('send-btn');
-      this.statusDot = document.getElementById('status-dot');
-      this.statusText = document.getElementById('status-text');
-      this.examplesEl = document.getElementById('examples');
+      this.messagesEl = document.getElementById("messages");
+      this.inputEl = document.getElementById("user-input");
+      this.sendBtn = document.getElementById("send-btn");
+      this.statusDot = document.getElementById("status-dot");
+      this.statusText = document.getElementById("status-text");
+      this.examplesEl = document.getElementById("examples");
       this.isProcessing = false;
       this.currentSources = []; // Store sources for citation linking
-      
+
       this.init();
     }
 
     init() {
       // Send button click
-      this.sendBtn.addEventListener('click', () => this.sendMessage());
-      
+      this.sendBtn.addEventListener("click", () => this.sendMessage());
+
       // Enter to send (Shift+Enter for newline)
-      this.inputEl.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' && !e.shiftKey) {
+      this.inputEl.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" && !e.shiftKey) {
           e.preventDefault();
           this.sendMessage();
         }
       });
-      
+
       // Example question buttons
-      this.examplesEl.querySelectorAll('.example-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
+      this.examplesEl.querySelectorAll(".example-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
           this.inputEl.value = btn.textContent.trim();
           this.sendMessage();
         });
@@ -386,127 +478,139 @@ const base = import.meta.env.BASE_URL;
 
     setStatus(status, text) {
       this.statusText.textContent = text;
-      this.statusDot.className = 'w-2 h-2 rounded-full';
-      
-      if (status === 'ready') {
-        this.statusDot.classList.add('bg-emerald-500');
-      } else if (status === 'thinking') {
-        this.statusDot.classList.add('bg-amber-500', 'animate-pulse');
-      } else if (status === 'warning') {
-        this.statusDot.classList.add('bg-amber-500');
-      } else if (status === 'error') {
-        this.statusDot.classList.add('bg-red-500');
+      this.statusDot.className = "w-2 h-2 rounded-full";
+
+      if (status === "ready") {
+        this.statusDot.classList.add("bg-emerald-500");
+      } else if (status === "thinking") {
+        this.statusDot.classList.add("bg-amber-500", "animate-pulse");
+      } else if (status === "warning") {
+        this.statusDot.classList.add("bg-amber-500");
+      } else if (status === "error") {
+        this.statusDot.classList.add("bg-red-500");
       }
     }
 
     addMessage(role, content) {
-      const isUser = role === 'user';
-      
-      const wrapper = document.createElement('div');
-      wrapper.className = `flex gap-3 ${isUser ? 'flex-row-reverse' : ''}`;
-      
+      const isUser = role === "user";
+
+      const wrapper = document.createElement("div");
+      wrapper.className = `flex gap-3 ${isUser ? "flex-row-reverse" : ""}`;
+
       // Avatar
-      const avatar = document.createElement('div');
-      avatar.className = `w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${isUser ? 'bg-copper text-white' : 'bg-copper/10'}`;
-      avatar.innerHTML = isUser 
+      const avatar = document.createElement("div");
+      avatar.className = `w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${isUser ? "bg-copper text-white" : "bg-copper/10"}`;
+      avatar.innerHTML = isUser
         ? '<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"></path></svg>'
         : '<svg class="w-4 h-4 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>';
-      
+
       // Message bubble
-      const bubble = document.createElement('div');
-      bubble.className = 'bubble rounded-lg p-4 max-w-[80%]';
-      
+      const bubble = document.createElement("div");
+      bubble.className = "bubble rounded-lg p-4 max-w-[80%]";
+
       if (isUser) {
         // User message - copper gradient
-        bubble.style.background = 'linear-gradient(to right, #B87333, #d4956b)';
-        bubble.style.color = 'white';
+        bubble.style.background = "linear-gradient(to right, #B87333, #d4956b)";
+        bubble.style.color = "white";
       } else {
         // Assistant message - light stone
-        bubble.style.background = '#fafaf9';
-        bubble.style.color = '#292524';
+        bubble.style.background = "#fafaf9";
+        bubble.style.color = "#292524";
       }
-      
-      if (typeof content === 'string') {
+
+      if (typeof content === "string") {
         bubble.innerHTML = this.formatMessage(content);
       } else {
         bubble.appendChild(content);
       }
-      
+
       wrapper.appendChild(avatar);
       wrapper.appendChild(bubble);
       this.messagesEl.appendChild(wrapper);
       this.messagesEl.scrollTop = this.messagesEl.scrollHeight;
-      
+
       return bubble;
     }
 
     formatMessage(text) {
       // Handle empty string for streaming initialization
-      if (text === '') {
-        return '';
+      if (text === "") {
+        return "";
       }
-      
+
       // Safety check for invalid input
-      if (!text || typeof text !== 'string') {
-        console.warn('formatMessage called with invalid text:', text);
-        return '';
+      if (!text || typeof text !== "string") {
+        console.warn("formatMessage called with invalid text:", text);
+        return "";
       }
-      
+
       // Convert markdown-style formatting
       let formatted = text
-        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-        .replace(/\n/g, '<br>')
-        .replace(/• /g, '&bull; ');
-      
+        .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+        .replace(/\n/g, "<br>")
+        .replace(/• /g, "&bull; ");
+
       // Convert various citation formats to clickable buttons:
       // [1], [2], [Source 1], [Source 2: item 28], [Source 3: items 38-39], etc.
-      formatted = formatted.replace(/\[(?:Source\s*)?(\d+)(?:[:\s][^\]]+)?\]/g, (match, num) => {
-        const idx = parseInt(num) - 1;
-        console.log('Converting citation:', match, '-> button for source', idx);
-        return `<button class="source-btn" data-source="${idx}" title="Click to view source">[${num}]</button>`;
-      });
-      
+      formatted = formatted.replace(
+        /\[(?:Source\s*)?(\d+)(?:[:\s][^\]]+)?\]/g,
+        (match, num) => {
+          const idx = parseInt(num) - 1;
+          console.log(
+            "Converting citation:",
+            match,
+            "-> button for source",
+            idx
+          );
+          return `<button class="source-btn" data-source="${idx}" title="Click to view source">[${num}]</button>`;
+        }
+      );
+
       return formatted;
     }
-    
+
     // Attach click handlers after content is rendered
     attachSourceHandlers(bubble) {
-      const buttons = bubble.querySelectorAll('.source-btn');
-      console.log('attachSourceHandlers: Found', buttons.length, 'source buttons');
-      buttons.forEach(btn => {
-        btn.addEventListener('click', (e) => {
+      const buttons = bubble.querySelectorAll(".source-btn");
+      console.log(
+        "attachSourceHandlers: Found",
+        buttons.length,
+        "source buttons"
+      );
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
           e.preventDefault();
           const idx = parseInt(btn.dataset.source);
           this.showSourceModal(idx);
         });
       });
     }
-    
+
     showSourceModal(idx) {
       const source = this.currentSources[idx];
       if (!source) {
-        alert('Source not found');
+        alert("Source not found");
         return;
       }
-      
+
       // Remove existing modal
-      const existing = document.getElementById('source-modal');
+      const existing = document.getElementById("source-modal");
       if (existing) existing.remove();
-      
+
       // Build source link if available
-      const sourceLink = source.source_url 
+      const sourceLink = source.source_url
         ? `<a href="${source.source_url}" target="_blank" rel="noopener noreferrer" class="source-link">
             <svg class="inline w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
             </svg>
             View Original Document
           </a>`
-        : '';
-      
+        : "";
+
       // Create modal
-      const modal = document.createElement('div');
-      modal.id = 'source-modal';
-      modal.className = 'source-modal-overlay';
+      const modal = document.createElement("div");
+      modal.id = "source-modal";
+      modal.className = "source-modal-overlay";
       modal.innerHTML = `
         <div class="source-modal">
           <div class="source-modal-header">
@@ -514,39 +618,44 @@ const base = import.meta.env.BASE_URL;
             <button class="source-modal-close">&times;</button>
           </div>
           <div class="source-modal-meta">
-            ${source.source_name ? `<div class="source-name">${source.source_name}</div>` : ''}
-            ${source.source_type ? `<span class="source-type">${source.source_type.toUpperCase()}</span>` : ''}
+            ${source.source_name ? `<div class="source-name">${source.source_name}</div>` : ""}
+            ${source.source_type ? `<span class="source-type">${source.source_type.toUpperCase()}</span>` : ""}
             <span class="source-score">Relevance: ${(source.score * 100).toFixed(0)}%</span>
           </div>
-          ${sourceLink ? `<div class="source-actions">${sourceLink}</div>` : ''}
+          ${sourceLink ? `<div class="source-actions">${sourceLink}</div>` : ""}
           <div class="source-modal-content">
             <p>${source.text}</p>
           </div>
         </div>
       `;
-      
+
       document.body.appendChild(modal);
-      
+
       // Close handlers
-      modal.querySelector('.source-modal-close').addEventListener('click', () => modal.remove());
-      modal.addEventListener('click', (e) => {
+      modal
+        .querySelector(".source-modal-close")
+        .addEventListener("click", () => modal.remove());
+      modal.addEventListener("click", (e) => {
         if (e.target === modal) modal.remove();
       });
     }
 
     showTyping() {
-      const wrapper = document.createElement('div');
-      wrapper.className = 'flex gap-3';
-      wrapper.id = 'typing-wrapper';
-      
-      const avatar = document.createElement('div');
-      avatar.className = 'w-8 h-8 rounded-full bg-copper/10 flex items-center justify-center flex-shrink-0';
-      avatar.innerHTML = '<svg class="w-4 h-4 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>';
-      
-      const typing = document.createElement('div');
-      typing.className = 'typing-indicator bg-stone-50 rounded-lg';
-      typing.innerHTML = '<div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>';
-      
+      const wrapper = document.createElement("div");
+      wrapper.className = "flex gap-3";
+      wrapper.id = "typing-wrapper";
+
+      const avatar = document.createElement("div");
+      avatar.className =
+        "w-8 h-8 rounded-full bg-copper/10 flex items-center justify-center flex-shrink-0";
+      avatar.innerHTML =
+        '<svg class="w-4 h-4 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>';
+
+      const typing = document.createElement("div");
+      typing.className = "typing-indicator bg-stone-50 rounded-lg";
+      typing.innerHTML =
+        '<div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>';
+
       wrapper.appendChild(avatar);
       wrapper.appendChild(typing);
       this.messagesEl.appendChild(wrapper);
@@ -554,55 +663,58 @@ const base = import.meta.env.BASE_URL;
     }
 
     hideTyping() {
-      const typing = document.getElementById('typing-wrapper');
+      const typing = document.getElementById("typing-wrapper");
       if (typing) typing.remove();
     }
 
     async sendMessage() {
       const message = this.inputEl.value.trim();
       if (!message || this.isProcessing) return;
-      
+
       this.isProcessing = true;
       this.sendBtn.disabled = true;
-      this.inputEl.value = '';
-      
+      this.inputEl.value = "";
+
       // Hide examples after first message
-      this.examplesEl.classList.add('hidden');
-      
+      this.examplesEl.classList.add("hidden");
+
       // Add user message
-      this.addMessage('user', message);
-      
+      this.addMessage("user", message);
+
       // Show typing indicator
       this.showTyping();
-      this.setStatus('thinking', 'Searching & generating...');
-      
+      this.setStatus("thinking", "Searching & generating...");
+
       try {
         // Call RAG server's /chat endpoint which handles search + AI generation
         const response = await fetch(`${CONFIG.ragServer}/chat`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ question: message, top_k: 5 })
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ question: message, top_k: 5 }),
         });
-        
+
         if (!response.ok) {
-          throw new Error('Chat service unavailable');
+          throw new Error("Chat service unavailable");
         }
-        
+
         // Hide typing and create streaming bubble
         this.hideTyping();
-        const bubble = this.addMessage('assistant', '');
-        bubble.innerHTML = '<span class="generating-placeholder">Generating response...</span>';
-        
+        const bubble = this.addMessage("assistant", "");
+        bubble.innerHTML =
+          '<span class="generating-placeholder">Generating response...</span>';
+
         // Handle SSE streaming from RAG server
         await this.handleChatStream(response, bubble);
-        
-        this.setStatus('ready', 'Ready');
-        
+
+        this.setStatus("ready", "Ready");
       } catch (error) {
-        console.error('Error:', error);
+        console.error("Error:", error);
         this.hideTyping();
-        this.addMessage('assistant', `Sorry, I encountered an error: ${error.message}. Please try again.`);
-        this.setStatus('error', 'Error occurred');
+        this.addMessage(
+          "assistant",
+          `Sorry, I encountered an error: ${error.message}. Please try again.`
+        );
+        this.setStatus("error", "Error occurred");
       } finally {
         this.isProcessing = false;
         this.sendBtn.disabled = false;
@@ -613,37 +725,37 @@ const base = import.meta.env.BASE_URL;
     async handleChatStream(response, bubble) {
       const reader = response.body.getReader();
       const decoder = new TextDecoder();
-      let fullText = '';
-      let buffer = '';
+      let fullText = "";
+      let buffer = "";
 
       while (true) {
         const { done, value } = await reader.read();
         if (done) break;
 
         buffer += decoder.decode(value, { stream: true });
-        const lines = buffer.split('\n');
-        buffer = lines.pop() || '';
+        const lines = buffer.split("\n");
+        buffer = lines.pop() || "";
 
         for (const line of lines) {
-          if (!line.startsWith('data: ')) continue;
-          
+          if (!line.startsWith("data: ")) continue;
+
           try {
             const data = JSON.parse(line.slice(6));
-            
-            if (data.type === 'sources') {
+
+            if (data.type === "sources") {
               // Store sources for citation linking
               this.currentSources = data.sources;
-            } else if (data.type === 'delta') {
+            } else if (data.type === "delta") {
               // Streaming text chunk
               fullText += data.text;
               bubble.innerHTML = this.formatMessage(fullText);
               this.messagesEl.scrollTop = this.messagesEl.scrollHeight;
-            } else if (data.type === 'error') {
+            } else if (data.type === "error") {
               throw new Error(data.error);
             }
             // 'done' type just signals end of stream
           } catch (e) {
-            if (e.message && !e.message.includes('JSON')) {
+            if (e.message && !e.message.includes("JSON")) {
               throw e; // Re-throw real errors, not JSON parse errors
             }
           }
@@ -659,7 +771,7 @@ const base = import.meta.env.BASE_URL;
   }
 
   // Initialize when DOM is ready
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener("DOMContentLoaded", () => {
     new MSHADemo();
   });
 </script>

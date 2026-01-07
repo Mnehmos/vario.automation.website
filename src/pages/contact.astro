@@ -1,120 +1,195 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Contact" description="Book a free 20-minute automation consultation. Tell me what you're doing manually.">
+<Layout
+  title="Contact"
+  description="Book a free 20-minute automation consultation. Tell me what you're doing manually."
+>
   <section class="py-20">
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid lg:grid-cols-2 gap-16">
         <div>
-          <h1 class="font-display text-4xl font-bold text-stone-900 mb-6">
+          <h1
+            class="font-display text-4xl font-bold text-stone-900 dark:text-stone-50 mb-6"
+          >
             Let's talk
           </h1>
-          <p class="text-xl text-stone-600 mb-8">
-            Tell me what's eating up your time. I'll tell you what we can automate first.
+          <p class="text-xl text-stone-600 dark:text-stone-300 mb-8">
+            Tell me what's eating up your time. I'll tell you what we can
+            automate first.
           </p>
-          
+
           <div class="space-y-8">
             <div>
-              <h2 class="font-semibold text-stone-900 mb-4">What to include</h2>
-              <ul class="space-y-3 text-stone-600">
+              <h2 class="font-semibold text-stone-900 dark:text-stone-50 mb-4">
+                What to include
+              </h2>
+              <ul class="space-y-3 text-stone-600 dark:text-stone-300">
                 <li class="flex items-start gap-3">
-                  <svg class="w-5 h-5 text-copper shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  <svg
+                    class="w-5 h-5 text-copper shrink-0 mt-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"></path>
                   </svg>
                   <span>What manual tasks are taking up time?</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <svg class="w-5 h-5 text-copper shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  <svg
+                    class="w-5 h-5 text-copper shrink-0 mt-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"></path>
                   </svg>
                   <span>What tools/apps are involved?</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <svg class="w-5 h-5 text-copper shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  <svg
+                    class="w-5 h-5 text-copper shrink-0 mt-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"></path>
                   </svg>
                   <span>Rough timeline and budget (if you have one)</span>
                 </li>
               </ul>
             </div>
-            
-            <div class="bg-stone-100 rounded-xl p-6">
-              <h3 class="font-semibold text-stone-900 mb-3">Prefer to schedule directly?</h3>
-              <p class="text-stone-600 text-sm mb-4">
+
+            <div class="bg-stone-100 dark:bg-stone-800 rounded-xl p-6">
+              <h3 class="font-semibold text-stone-900 dark:text-stone-50 mb-3">
+                Prefer to schedule directly?
+              </h3>
+              <p class="text-stone-600 dark:text-stone-300 text-sm mb-4">
                 Book a free 20-minute call to discuss your automation needs.
               </p>
-              <a href="https://calendly.com/mnehmos" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-stone-900 text-stone-50 px-4 py-2 rounded-lg font-medium hover:bg-stone-800 transition-colors text-sm">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+              <a
+                href="https://calendly.com/mnehmos"
+                target="_blank"
+                rel="noopener"
+                class="inline-flex items-center gap-2 bg-stone-900 text-stone-50 px-4 py-2 rounded-lg font-medium hover:bg-stone-800 transition-colors text-sm"
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  ></path>
                 </svg>
                 Open Calendly
               </a>
-              <p class="text-stone-500 text-xs mt-2">
-
-              </p>
+              <p class="text-stone-500 text-xs mt-2"></p>
             </div>
-            
+
             <div>
-              <h3 class="font-semibold text-stone-900 mb-3">Or email directly</h3>
-              <a href="mailto:Mnehmos@gmail.com" class="text-copper hover:underline">
+              <h3 class="font-semibold text-stone-900 dark:text-stone-50 mb-3">
+                Or email directly
+              </h3>
+              <a
+                href="mailto:Mnehmos@gmail.com"
+                class="text-copper hover:underline"
+              >
                 Mnehmos@gmail.com
               </a>
-              <p class="text-stone-500 text-xs mt-1">
-
-              </p>
+              <p class="text-stone-500 text-xs mt-1"></p>
             </div>
           </div>
         </div>
-        
-        <div class="bg-white rounded-2xl border border-stone-200 p-8">
-          <h2 class="font-display text-xl font-semibold text-stone-900 mb-6">Send a message</h2>
-          
-          <form action="https://formspree.io/f/xnjarbvq" method="POST" class="space-y-6">
+
+        <div
+          class="bg-white dark:bg-stone-800 rounded-2xl border border-stone-200 dark:border-stone-700 p-8"
+        >
+          <h2
+            class="font-display text-xl font-semibold text-stone-900 dark:text-stone-50 mb-6"
+          >
+            Send a message
+          </h2>
+
+          <form
+            action="https://formspree.io/f/xnjarbvq"
+            method="POST"
+            class="space-y-6"
+          >
             <!-- Honeypot for spam -->
             <input type="text" name="_gotcha" style="display:none" />
-            
+
             <div>
-              <label for="name" class="block text-sm font-medium text-stone-700 mb-2">Name</label>
-              <input 
-                type="text" 
-                id="name" 
-                name="name" 
+              <label
+                for="name"
+                class="block text-sm font-medium text-stone-700 dark:text-stone-300 mb-2"
+                >Name</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
                 required
-                class="w-full px-4 py-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-copper focus:border-transparent outline-none transition-all"
+                class="w-full px-4 py-3 border border-stone-300 dark:border-stone-600 rounded-lg focus:ring-2 focus:ring-copper focus:border-transparent outline-none transition-all bg-white dark:bg-stone-700 text-stone-900 dark:text-stone-100"
                 placeholder="Your name"
               />
             </div>
-            
+
             <div>
-              <label for="email" class="block text-sm font-medium text-stone-700 mb-2">Email</label>
-              <input 
-                type="email" 
-                id="email" 
-                name="email" 
+              <label
+                for="email"
+                class="block text-sm font-medium text-stone-700 dark:text-stone-300 mb-2"
+                >Email</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
                 required
-                class="w-full px-4 py-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-copper focus:border-transparent outline-none transition-all"
+                class="w-full px-4 py-3 border border-stone-300 dark:border-stone-600 rounded-lg focus:ring-2 focus:ring-copper focus:border-transparent outline-none transition-all bg-white dark:bg-stone-700 text-stone-900 dark:text-stone-100"
                 placeholder="you@company.com"
               />
             </div>
-            
+
             <div>
-              <label for="company" class="block text-sm font-medium text-stone-700 mb-2">Company <span class="text-stone-400">(optional)</span></label>
-              <input 
-                type="text" 
-                id="company" 
+              <label
+                for="company"
+                class="block text-sm font-medium text-stone-700 dark:text-stone-300 mb-2"
+                >Company <span class="text-stone-400 dark:text-stone-500"
+                  >(optional)</span
+                ></label
+              >
+              <input
+                type="text"
+                id="company"
                 name="company"
-                class="w-full px-4 py-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-copper focus:border-transparent outline-none transition-all"
+                class="w-full px-4 py-3 border border-stone-300 dark:border-stone-600 rounded-lg focus:ring-2 focus:ring-copper focus:border-transparent outline-none transition-all bg-white dark:bg-stone-700 text-stone-900 dark:text-stone-100"
                 placeholder="Your company"
               />
             </div>
-            
+
             <div>
-              <label for="project-type" class="block text-sm font-medium text-stone-700 mb-2">What are you looking for?</label>
-              <select 
-                id="project-type" 
+              <label
+                for="project-type"
+                class="block text-sm font-medium text-stone-700 dark:text-stone-300 mb-2"
+                >What are you looking for?</label
+              >
+              <select
+                id="project-type"
                 name="project-type"
-                class="w-full px-4 py-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-copper focus:border-transparent outline-none transition-all bg-white"
+                class="w-full px-4 py-3 border border-stone-300 dark:border-stone-600 rounded-lg focus:ring-2 focus:ring-copper focus:border-transparent outline-none transition-all bg-white dark:bg-stone-700 text-stone-900 dark:text-stone-100"
               >
                 <option value="">Select an option...</option>
                 <option value="workflow-automation">Workflow Automation</option>
@@ -124,30 +199,43 @@ import Layout from '../layouts/Layout.astro';
                 <option value="not-sure">Not sure yet</option>
               </select>
             </div>
-            
+
             <div>
-              <label for="message" class="block text-sm font-medium text-stone-700 mb-2">Tell me about the problem</label>
-              <textarea 
-                id="message" 
-                name="message" 
-                rows="5" 
+              <label
+                for="message"
+                class="block text-sm font-medium text-stone-700 dark:text-stone-300 mb-2"
+                >Tell me about the problem</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
                 required
-                class="w-full px-4 py-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-copper focus:border-transparent outline-none transition-all resize-none"
+                class="w-full px-4 py-3 border border-stone-300 dark:border-stone-600 rounded-lg focus:ring-2 focus:ring-copper focus:border-transparent outline-none transition-all resize-none bg-white dark:bg-stone-700 text-stone-900 dark:text-stone-100"
                 placeholder="What manual tasks are eating up your time? What tools are involved? What would success look like?"
               ></textarea>
             </div>
-            
-            <button 
+
+            <button
               type="submit"
               class="w-full bg-stone-900 text-stone-50 px-6 py-4 rounded-lg font-semibold hover:bg-stone-800 transition-colors flex items-center justify-center gap-2"
             >
               Send message
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
               </svg>
             </button>
-            
-            <p class="text-stone-500 text-xs text-center">
+
+            <p class="text-stone-500 dark:text-stone-400 text-xs text-center">
               I'll get back to you within 24 hours.
             </p>
           </form>
@@ -155,15 +243,19 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
   </section>
-  
+
   <!-- Local info -->
-  <section class="py-16 bg-stone-100">
+  <section class="py-16 bg-stone-100 dark:bg-stone-800">
     <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="font-display text-2xl font-bold text-stone-900 mb-4">
+      <h2
+        class="font-display text-2xl font-bold text-stone-900 dark:text-stone-50 mb-4"
+      >
         Serving Safford + remote teams
       </h2>
-      <p class="text-stone-600 max-w-2xl mx-auto">
-        Based in Safford, Arizona (Graham County). I work with local businesses in Eastern Arizona and remote teams across the country. All consultations are available via video call.
+      <p class="text-stone-600 dark:text-stone-300 max-w-2xl mx-auto">
+        Based in Safford, Arizona (Graham County). I work with local businesses
+        in Eastern Arizona and remote teams across the country. All
+        consultations are available via video call.
       </p>
     </div>
   </section>
